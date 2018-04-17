@@ -38,9 +38,7 @@ def getYearAndCity(div):
 
 def printTuples(tuples):
     for tuple in tuples:
-        print("Year is : "+tuple[0])
-        print("City is : "+tuple[1])
-        print("------")
+        print(tuple[0]+" : "+tuple[1])
         
 def uniqueElementsOf(aList):
     return list(set(tuple(x) for x in aList))
@@ -55,4 +53,4 @@ while divDate != None:
     counter += 1
     divDate = getNthDiv(stringSoup, counter)
     
-printTuples(uniqueElementsOf(yearCityList))
+printTuples(yearCityList)
