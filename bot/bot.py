@@ -26,15 +26,18 @@ def getYearAndCity(div):
     tagDate = div[div.index("<a"):div.index("</a>")]
     date = tagDate[tagDate.index(">") + 1:]
     year = date.split(".")[0]
-    
+
     if not year.isnumeric():
         return
 
-    skipDate = div[div.index("<a")+ 2:]
-    tagCityStart = skipDate[skipDate.index("<a"):]
-    tagCity = tagCityStart[:tagCityStart.index("</a>")]
-    city = tagCity[tagCity.index(">") + 1:]
-    return [year, city]
+    if div[div.index("</a>") + 7] == '-':
+        return
+    else:  
+        skipDate = div[div.index("<a")+ 2:]
+        tagCityStart = skipDate[skipDate.index("<a"):]
+        tagCity = tagCityStart[:tagCityStart.index("</a>")]
+        city = tagCity[tagCity.index(">") + 1:]
+        return [year, city]
 
 def printTuples(tuples):
     for tuple in tuples:
