@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 # oldest year found : 1765
 # isnumeric() pour détecter si la date est bien récupéree
 
-response=urlopen("http://wikipast.epfl.ch/wikipast/index.php/1945")
+response=urlopen("http://wikipast.epfl.ch/wikipast/index.php/1970")
 page_source=response.read()
 soup=BeautifulSoup(page_source,'html.parser')
 stringSoup = str(soup)
@@ -37,14 +37,23 @@ def getYearAndCity(div):
         tagCityStart = skipDate[skipDate.index("<a"):]
         tagCity = tagCityStart[:tagCityStart.index("</a>")]
         city = tagCity[tagCity.index(">") + 1:]
-        return [year, city]
+        return (year, city)
 
 def printTuples(tuples):
     for tuple in tuples:
         print(tuple[0]+" : "+tuple[1])
         
-def uniqueElementsOf(aList):
-    return list(set(tuple(x) for x in aList))
+def tuplesWithMultiplicity(yearCityList):
+    tuples = []
+    for i in range(0, len(yearCityList)):
+        compte = yearCityList.count(yearCityList[i])
+        tuples.append((yearCityList[i], compte))
+
+    return [list(item) for item in set(tuple(row) for row in tuples)]
+
+def printBigTuples(tuples):
+    for tuple in tuples:
+        print(tuple[0][0], tuple[0][1], tuple[1])
     
 counter = 1
 divDate = getNthDiv(stringSoup, counter)
@@ -56,4 +65,5 @@ while divDate != None:
     counter += 1
     divDate = getNthDiv(stringSoup, counter)
     
-printTuples(yearCityList)
+#printTuples(yearCityList)
+printBigTuples(tuplesWithMultiplicity(yearCityList))
