@@ -36,7 +36,8 @@ def determinePays(lieu):
     dataPays = next((item for item in countries if item["name"] == lieu), False)
     if(dataPays):
         return (dataPays['capital'])
-
+    else:
+        return lieu
 
 print(determinePays('Lyon'))
 
