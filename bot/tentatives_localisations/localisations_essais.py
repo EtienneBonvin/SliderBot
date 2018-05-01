@@ -38,7 +38,7 @@ def determinePays(lieu):
         return (dataPays['capital'])
 
 
-print(determinePays('Canada'))
+print(determinePays('Lyon'))
 
 def distanceCalculation(lieu1,lieu2):
     """
