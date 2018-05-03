@@ -1,0 +1,20 @@
+{
+  
+  "members" : [
+    {
+      "name" : "John Fitzgerald Kennedy",
+      "lat" : 45,
+      "lng" : 23
+    },
+    {
+      "name" : "Abraham Lincoln",
+      "lat" : 47,
+      "lng" : 13
+    },
+   {
+      "name" : "Stephen Curry",
+      "lat" : 25,
+      "lng" : 23
+    }
+  ]
+}
