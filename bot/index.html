@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Map Test</title>
+  <style>
+    #carte{
+      height:400px;
+      width:100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Carte Wikipast</h1>
+  <div id="carte"></div>
+
+  <script>
+    function initCarte(){
+      //Options de la carte
+      var options={
+        zoom:4,
+        center:{lat:48.7,lng:18}
+      }
+      //Création de la carte
+      var carte=new google.maps.Map(document.getElementById('carte'), options);
+
+      var requestURL = 'https://gist.githubusercontent.com/mael25/718231cd2431099f7959beb9e15f0744/raw/5e41d8cd0bbc61ecaf3f2b8d5e126e60e9e72aae/test.json';
+      var request = new XMLHttpRequest();
+      request.open('GET', requestURL);
+      request.responseType = 'json';
+      request.send();
+      request.onload = function() {
+        var reponse = request.response;
+        //  var test=reponse[1]["proprietes"];
+        //  window.alert(test);
+        for(var i=0; i<reponse.length; i++){
+          ajouterPoint(reponse[i]);
+        }
+      }
+
+
+/*
+      //Tableau de points de type : [nom,latitude,longitude,év.image]
+      var apoints=[
+        ['John Fitzgerald Kennedy',45,23, 'https://images.radio-canada.ca/w_635,h_357/v1/ici-info/16x9/midinfo-john-fitzgerald-kennedy-jfk-etats-unis-35e-president-americain.jpg'],
+        ['John Fitzgerald Kennedy',44,22, 'https://images.radio-canada.ca/w_635,h_357/v1/ici-info/16x9/midinfo-john-fitzgerald-kennedy-jfk-etats-unis-35e-president-americain.jpg'],
+        ['John Fitzgerald Kennedy',45,20, 'https://images.radio-canada.ca/w_635,h_357/v1/ici-info/16x9/midinfo-john-fitzgerald-kennedy-jfk-etats-unis-35e-president-americain.jpg'],
+        ['John Fitzgerald Kennedy',55,10],
+      ];
+      */
+      //Ce tableau contiendra tous les markers créés
+      markers=[];
+      //Ajouter les points
+
+
+      var image;
+      function ajouterPoint(proprietes){
+
+          // Création d'un marker
+        /*  if(proprietes[3])
+          {
+            image = {
+              url:proprietes[3],
+              scaledSize: new google.maps.Size(80,50)
+            };
+          }*/
+
+          var point=new google.maps.Marker({
+            position:{lat:proprietes["proprietes"][1], lng: proprietes["proprietes"][2]},
+            map:carte,
+            //title:proprietes[0],
+            icon:image
+            //icon:{path:google.maps.SymbolPath.CIRCLE, scale:10}
+          });
+
+  //        if(proprietes[3])
+  //        {
+  //          point.setIcon(proprietes[3]);
+  //        }
+
+          var fenetreInfo=new google.maps.InfoWindow({
+            content:proprietes["proprietes"][0]
+          });
+          point.addListener('click', function(){
+            fenetreInfo.open(carte,point);
+          });
+          markers.push(point);
+
+      }
+
+      var regroupement = new MarkerClusterer(carte, markers,{
+        imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+      });
+
+    }
+  </script>
+  <script
+    src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUYredUZ1kaPBxNz0ToUQas1MwCF4-ER4&callback=initCarte">
+  </script>
+
+
+
+
+
+
+  <div>
+	<input type="range" min="1700" max="2018" value="1860" id="slider_annee">
+	<p>Année: <b><span id="annee"></b></span></p>
+  </div>
+  <style>
+    #slider_annee{
+      width:100%;
+    }
+  </style>
+  <script>
+	var slider = document.getElementById("slider_annee");
+	var output = document.getElementById("annee");
+	output.innerHTML = slider.value; // Display the default slider value
+
+	// Update the current slider value (each time you drag the slider handle)
+	slider.oninput = function() {
+		output.innerHTML = this.value;
+	}
+
+	</script>
+
+</body>
+</html>
