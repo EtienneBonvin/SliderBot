@@ -7,6 +7,8 @@ import time
 from countries import countries
 from geopy import *
 from geopy.geocoders import *
+from html.parser import HTMLParser
+import spacy
 
 # oldest year found : 1765
 # isnumeric() pour détecter si la date est bien récupéree
@@ -24,6 +26,7 @@ def masterFunction(year):
     soup=BeautifulSoup(page_source,'html.parser')
     stringSoup = str(soup)
     geolocator = Nominatim()
+    nlp = spacy.load('fr')
 
     #=============Parsing===============
 
@@ -40,7 +43,7 @@ def masterFunction(year):
 
         return divStart
 
-    def getYearAndCity(div):
+    def getYearCityAndName(div):
         tagDate = div[div.index("<a"):div.index("</a>")]
         date = tagDate[tagDate.index(">") + 1:]
         year = date.split(".")[0]
@@ -55,6 +58,26 @@ def masterFunction(year):
             tagCityStart = skipDate[skipDate.index("<a"):]
             tagCity = tagCityStart[:tagCityStart.index("</a>")]
             city = tagCity[tagCity.index(">") + 1:]
+            skipCity = tagCityStart[tagCityStart.index("</a>")+6:tagCityStart.index("</li>")]
+
+            class MyHTMLParser(HTMLParser):
+                def handle_starttag(self, tag, attrs):
+                    if tag == 'a':
+                        for attr in attrs:
+                            if str(attr[0]) == 'title':
+                                persons = [token for token in nlp(attr[1]) if token.ent_type_ == 'PERSON']
+                                print('Sentence : ' + attr[1])
+                                print('Tokens : '+ persons)
+
+            parser = MyHTMLParser()
+            parser.feed(skipCity)
+
+            """
+            tagDivStart = skipCity[skipCity.index("<a"):]
+            tagDiv = tagDivStart[:tagDivStart.index("</a>")]
+            divName = tagDiv[tagDiv.index(">") + 1:]
+            print(divName)"""
+
             return (year, city)
 
     #===========Location===========
@@ -116,7 +139,7 @@ def masterFunction(year):
         divDate = getNthDiv(stringSoup, counter)
         yearCityList = []
         while divDate != None:
-            element = getYearAndCity(divDate)
+            element = getYearCityAndName(divDate)
             if element is not None:
                 yearCityList.append(element)
             counter += 1
