@@ -4,39 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Map Test</title>
+  <title>SliderBot</title>
   <style>
     #carte{
       height:400px;
       width:100%;
     }
+    #titre, p{
+      text-align:center;
+    }
   </style>
 </head>
 <body>
-  <h1>Carte Wikipast</h1>
+  <h1 id="titre">SliderBot</h1>
   <div id="carte"></div>
 
   <script>
     function initCarte(){
+
+
+      //Initialise slider
+      var slider = document.getElementById("slider_annee");
+      var output = document.getElementById("annee");
+      // Display the default slider value
+      output.innerHTML = slider.value;
+      // Chaque fois qu'on bouge le slider :
+      slider.oninput = function() {
+        //Met à jour la valeur du slider
+        output.innerHTML = this.value;
+        //Réinitialise tableau
+        markers=[];
+        //Met à jour la carte
+        update();
+      }
       //Options de la carte
       var options={
         zoom:4,
         center:{lat:48.7,lng:18}
       }
-      //Création de la carte
-      var carte=new google.maps.Map(document.getElementById('carte'), options);
+      //Initialise tableau pour regroupement la première fois
+      markers=[];
+      //Met à jour la carte la première fois
+      update();
 
-      var requestURL = 'https://gist.githubusercontent.com/mael25/718231cd2431099f7959beb9e15f0744/raw/b1ef925c36d3e2bb0017032c4a1acf4cea5b0e7b/test.json';
-      var request = new XMLHttpRequest();
-      request.open('GET', requestURL);
-      request.responseType = 'json';
-      request.send();
-      request.onload = function() {
-        var reponse = request.response;
-        //  var test=reponse[1]["proprietes"];
-        //  window.alert(test);
-        for(var i=0; i<reponse.length; i++){
-          ajouterPoint(reponse[i]);
+
+      function update(){
+        //Création de la carte
+        var carte=new google.maps.Map(document.getElementById('carte'), options);
+        //Chercher le fichier JSON
+        var requestURL='https://gist.githubusercontent.com/mael'+String(slider.value)+'/718231cd2431099f7959beb9e15f0744/raw/25793f1f137638bc9b253c5bc829667804f613fa/test.json';
+        //var requestURL = 'https://gist.githubusercontent.com/mael25/718231cd2431099f7959beb9e15f0744/raw/25793f1f137638bc9b253c5bc829667804f613fa/test.json';
+        var request = new XMLHttpRequest();
+        request.open('GET', requestURL);
+        request.responseType = 'json';
+        request.send();
+        request.onload = function() {
+          var reponse = request.response;
+         //On ajoute les points
+          for(var i=0; i<reponse.length; i++){
+            ajouterPoint(reponse[i]);
+          }
+          //On regroupe les points
+          var regroupement = new MarkerClusterer(carte, markers,{
+            imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+          });
         }
       }
 
@@ -55,8 +86,6 @@
 
       var image;
       function ajouterPoint(proprietes){
-
-          // Création d'un marker
         /*  if(proprietes[3])
           {
             image = {
@@ -64,20 +93,17 @@
               scaledSize: new google.maps.Size(80,50)
             };
           }*/
-
           var point=new google.maps.Marker({
             position:{lat:proprietes["proprietes"][1], lng: proprietes["proprietes"][2]},
             map:carte,
             //title:proprietes[0],
-            icon:image
+            //icon:image
             //icon:{path:google.maps.SymbolPath.CIRCLE, scale:10}
           });
-
   //        if(proprietes[3])
   //        {
   //          point.setIcon(proprietes[3]);
   //        }
-
           var fenetreInfo=new google.maps.InfoWindow({
             content:proprietes["proprietes"][0]
           });
@@ -86,10 +112,6 @@
           });
           markers.push(point);
       }
-
-      var regroupement = new MarkerClusterer(carte, markers,{
-        imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
-      });
 
     }
   </script>
@@ -101,25 +123,13 @@
   </script>
 
   <div>
-	<input type="range" min="1700" max="2018" value="1860" id="slider_annee">
-	<p>Année: <b><span id="annee"></b></span></p>
+  	<input type="range" min="10" max="2018" value="25" id="slider_annee">
+  	<p>Année: <b><span id="annee"></b></span></p>
   </div>
   <style>
     #slider_annee{
       width:100%;
     }
   </style>
-  <script>
-	var slider = document.getElementById("slider_annee");
-	var output = document.getElementById("annee");
-	output.innerHTML = slider.value; // Display the default slider value
-
-	// Update the current slider value (each time you drag the slider handle)
-	slider.oninput = function() {
-		output.innerHTML = this.value;
-	}
-
-	</script>
-
 </body>
 </html>
