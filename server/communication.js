@@ -4,7 +4,7 @@
 */
 
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-var IP_ADDRESSE = "128.179.178.60";
+var IP_ADDRESSE = "128.179.181.85";
 var PORT = "3000";
 
 function sendReq(){
