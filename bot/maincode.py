@@ -8,7 +8,6 @@ from countries import countries
 from geopy import *
 from geopy.geocoders import *
 from html.parser import HTMLParser
-import spacy
 
 # oldest year found : 1765
 # isnumeric() pour détecter si la date est bien récupéree
@@ -26,7 +25,14 @@ def masterFunction(year):
     soup=BeautifulSoup(page_source,'html.parser')
     stringSoup = str(soup)
     geolocator = Nominatim()
-    nlp = spacy.load('fr')
+
+    #=============String===============
+
+    """check that every word starts with upperletter"""
+    def isName(string):
+        if len(string) < 20 and string.istitle():
+            return True
+        return False
 
     #=============Parsing===============
 
@@ -44,14 +50,15 @@ def masterFunction(year):
         return divStart
 
     def getYearCityAndName(div):
+
         tagDate = div[div.index("<a"):div.index("</a>")]
         date = tagDate[tagDate.index(">") + 1:]
         year = date.split(".")[0]
-
+        
         if not year.isnumeric():
             return
 
-        if div[div.index("</a>") + 7] == '-':
+        if div[div.index("</a>") + 7] == '-' or div[div.index("</a>") + 4] == '.' or div[div.index("</a>") + 7] == ' ':
             return
         else:
             skipDate = div[div.index("<a")+ 2:]
@@ -61,24 +68,20 @@ def masterFunction(year):
             skipCity = tagCityStart[tagCityStart.index("</a>")+6:tagCityStart.index("</li>")]
 
             class MyHTMLParser(HTMLParser):
+                data = set()
                 def handle_starttag(self, tag, attrs):
                     if tag == 'a':
                         for attr in attrs:
                             if str(attr[0]) == 'title':
-                                persons = [token for token in nlp(attr[1]) if token.ent_type_ == 'PERSON']
-                                print('Sentence : ' + attr[1])
-                                print('Tokens : '+ persons)
+                                if isName(attr[1]):
+                                    self.data.add(attr[1])
 
             parser = MyHTMLParser()
             parser.feed(skipCity)
+            if len(parser.data) != 0:
+                print(year, city, parser.data)
+                return (year, city, parser.data)
 
-            """
-            tagDivStart = skipCity[skipCity.index("<a"):]
-            tagDiv = tagDivStart[:tagDivStart.index("</a>")]
-            divName = tagDiv[tagDiv.index(">") + 1:]
-            print(divName)"""
-
-            return (year, city)
 
     #===========Location===========
 
@@ -137,19 +140,19 @@ def masterFunction(year):
     def createCoreList():
         counter = 1
         divDate = getNthDiv(stringSoup, counter)
-        yearCityList = []
+        yearCityNameList = []
         while divDate != None:
             element = getYearCityAndName(divDate)
             if element is not None:
-                yearCityList.append(element)
+                yearCityNameList.append(element)
             counter += 1
             divDate = getNthDiv(stringSoup, counter)
 
-        return yearCityList
+        return yearCityNameList
 
     createJsonFile(finalNameCoordTuple(createCoreList()), year)
 
-masterFunction(1960)
+masterFunction(1968)
 
 #======Looping Test=======
 
