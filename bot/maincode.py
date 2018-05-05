@@ -8,6 +8,7 @@ from countries import countries
 from geopy import *
 from geopy.geocoders import *
 from html.parser import HTMLParser
+#from calais.base.client import Calais
 
 # oldest year found : 1765
 # isnumeric() pour détecter si la date est bien récupéree
@@ -25,12 +26,15 @@ def masterFunction(year):
     soup=BeautifulSoup(page_source,'html.parser')
     stringSoup = str(soup)
     geolocator = Nominatim()
+    #api = Calais("GNTyveGb6jdPMzYPVuyWJGE4AuyyGEuB", submitter="pycalais demo")
 
     #=============String===============
 
-    """check that every word starts with upperletter"""
+    """check that every word starts with upperletter and max length of 20 chars"""
     def isName(string):
         if len(string) < 20 and string.istitle():
+            #result = api.analyze('"""' + string + '"""')
+            #return 'entities' in result
             return True
         return False
 
@@ -54,7 +58,7 @@ def masterFunction(year):
         tagDate = div[div.index("<a"):div.index("</a>")]
         date = tagDate[tagDate.index(">") + 1:]
         year = date.split(".")[0]
-        
+
         if not year.isnumeric():
             return
 
@@ -152,7 +156,7 @@ def masterFunction(year):
 
     createJsonFile(finalNameCoordTuple(createCoreList()), year)
 
-masterFunction(1968)
+masterFunction(1971)
 
 #======Looping Test=======
 
