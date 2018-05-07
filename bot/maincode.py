@@ -8,6 +8,8 @@ from countries import countries
 from geopy import *
 from geopy.geocoders import *
 from html.parser import HTMLParser
+import unicodedata
+
 #from calais.base.client import Calais
 
 # oldest year found : 1765
@@ -37,6 +39,11 @@ def masterFunction(year):
             #return 'entities' in result
             return True
         return False
+
+    def remove_accents(input_str):
+        nfkd_form = unicodedata.normalize('NFKD', input_str)
+        return u"".join([c for c in nfkd_form if not unicodedata.combining(c)])
+
 
     #=============Parsing===============
 
@@ -72,18 +79,18 @@ def masterFunction(year):
             skipCity = tagCityStart[tagCityStart.index("</a>")+6:tagCityStart.index("</li>")]
 
             class MyHTMLParser(HTMLParser):
-                data = set()
+                data = []
                 def handle_starttag(self, tag, attrs):
                     if tag == 'a':
                         for attr in attrs:
                             if str(attr[0]) == 'title':
                                 if isName(attr[1]):
-                                    self.data.add(attr[1])
+                                    self.data.append(attr[1])
 
             parser = MyHTMLParser()
             parser.feed(skipCity)
             if len(parser.data) != 0:
-                print(year, city, parser.data)
+                #print(year, city, parser.data)
                 return (year, city, parser.data)
 
 
@@ -107,7 +114,7 @@ def masterFunction(year):
         output = []
         for tuple in tuples:
             coord = geolocator.geocode(capitalIfCountry(tuple[1]))
-            output.append(['None', coord.latitude, coord.longitude])
+            output.append([tuple[2], coord.latitude, coord.longitude])
         return output
 
     #=============Print=============
@@ -134,12 +141,28 @@ def masterFunction(year):
 
     #===========JSON file===========
 
-    def createJsonFile(tuples, year):
+    def createJson(inputData, year):
         """
-        Creates a JSON file 'year.json' containing [Name, latitude, longitude] arrays
+        Takes array [Name, lat, long] for each year
+        Outputs in .json such that it can be plotted
         """
+        indent = '    '
+        indent2 = '      '
+        maxLimit = len(inputData)
         with open(str(year)+'.json', 'w') as outfile:
-            json.dump(tuples, outfile, indent=4)
+            outfile.write('['+'\n')
+            for i in range (maxLimit):
+                if i == (maxLimit-1):
+                        outfile.write(indent + '{'+'\n')
+                        outfile.write(indent2 + ' "proprietes" : '+'['+'"'+remove_accents(str(inputData[i][0]))+'"'+ ','+ str(inputData[i][1])+ ','+ str(inputData[i][2])+']'+'\n')
+                        outfile.write(indent + '}'+'\n')
+                else:
+                    outfile.write(indent + '{'+'\n')
+                    outfile.write(indent2 + ' "proprietes" : '+'['+'"'+remove_accents(str(inputData[i][0]))+'"'+ ','+ str(inputData[i][1])+ ','+ str(inputData[i][2])+']'+'\n')
+                    outfile.write(indent + '}'+','+'\n')
+
+            outfile.write(']')
+        outfile.close()
 
     def createCoreList():
         counter = 1
@@ -154,14 +177,7 @@ def masterFunction(year):
 
         return yearCityNameList
 
-    createJsonFile(finalNameCoordTuple(createCoreList()), year)
 
-masterFunction(1971)
+    createJson(finalNameCoordTuple(createCoreList()),year)
 
-#======Looping Test=======
-
-# for yearIndex in range (1960,1970):
-#     time.sleep(10)
-#     print('Doing ' + str(yearIndex))
-#     time.sleep(20)
-#     masterFunction(yearIndex)
+masterFunction(1962)
