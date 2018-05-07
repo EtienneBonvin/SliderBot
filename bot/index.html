@@ -8,6 +8,7 @@
   <style>
     html, body{
       height:100%;
+      font-family: Arial, Verdana, sans-serif;
     }
     #carte{
       height:55%;
@@ -18,7 +19,7 @@
       text-align:center;
     }
     #slider_annee{
-      width:98%;
+      width:50%;
     }
   </style>
 </head>
@@ -26,7 +27,9 @@
   <h1 id="titre">SliderBot</h1>
   <div id="carte"></div>
   <div>
-    <input type="range" min="1600" max="2018" value="1808" id="slider_annee">
+    <input type="range" min="1600" max="2018" value="1809" id="slider_annee">
+  </div>
+  <div>
     <button onclick="diminuer()">-</button>
     <button onclick="augmenter()">+</button>
     <p>Année: <b><span id="annee"></b></span></p>
