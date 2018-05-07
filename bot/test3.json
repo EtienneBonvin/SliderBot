@@ -1,14 +1,17 @@
 [
     {
-       "proprietes" : ["Roman Polanski",52.5170365,13.3888599]
+       "proprietes" : ["['Naissance', 'Thomas Bouvier', 'Nicolas Bouvier']",46.2017559,6.1466014]
     },
     {
-       "proprietes" : ["Roman Polanski",52.5170365,13.3888599]
+       "proprietes" : ["['Deces', 'Auguste Piccard']",46.5218269,6.6327025]
     },
     {
-       "proprietes" : ["Andre Breton",48.8566101,2.3514992]
+       "proprietes" : ["['Deces', 'Auguste Piccard']",46.5218269,6.6327025]
     },
     {
-       "proprietes" : ["Enzo Ferrari",44.5255217,10.8663607]
+       "proprietes" : ["['Bale', 'Exposition', 'Arthur Honegger', 'Arthur Honegger']",36.1767521,5.6780416]
+    },
+    {
+       "proprietes" : ["['Beatles']",23.1319431,-82.3999067]
     }
 ]
