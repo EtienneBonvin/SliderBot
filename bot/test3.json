@@ -1,17 +1,5 @@
 [
     {
-      "proprietes" : ["Charles Manson : Condamnation",34.054935,-118.244476]
+       "proprietes" : ["Charles Manson : Condamnation",34.054935,-118.244476],
     },
-    {
-      "proprietes" : ["Sigmund Freud : Rehabilitation",48.2083537,16.3725042]
-    },
-    {
-      "proprietes" : ["JFK : Assassinat",48.2083537,16.3725042]
-    },
-    {
-      "proprietes" : ["EBR",15,40.001]
-    },
-    {
-      "proprietes" : ["Lincoln", 15, 40]
-    }
 ]
