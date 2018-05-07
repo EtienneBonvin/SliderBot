@@ -12,6 +12,7 @@
     #carte{
       height:55%;
       width:100%;
+      border-radius:4px;
     }
     #titre, p, div{
       text-align:center;
@@ -25,7 +26,9 @@
   <h1 id="titre">SliderBot</h1>
   <div id="carte"></div>
   <div>
-    <input type="range" min="1600" max="2018" value="1810" id="slider_annee">
+    <input type="range" min="1600" max="2018" value="1808" id="slider_annee">
+    <button onclick="diminuer()">-</button>
+    <button onclick="augmenter()">+</button>
     <p>Année: <b><span id="annee"></b></span></p>
   </div>
   <div>
@@ -46,26 +49,25 @@
     // Display the default slider value
     output.innerHTML = slider.value;
     // Chaque fois qu'on bouge le slider :
-    slider.oninput = function() {
-      //Met à jour la valeur du slider
-      output.innerHTML = this.value;
-      //Réinitialise tableau
-      markers=[];
-      //Met à jour la carte
+    slider.onmouseup = function() {
+      //Met à jour la carte quand on relâche le slider
       update();
+    }
+    slider.oninput = function() {
+      //Met à jour la valeur du slider quand on change la valeur
+      output.innerHTML = this.value;
     }
     //Options de la carte
     var options={
       zoom:2,
       center:{lat:30,lng:20}
     }
-    //Initialise tableau pour regroupement la première fois
-    var markers=[];
     //Met à jour la carte la première fois
     update();
 
     function update(){
-
+      //Réinitialise tableau
+      markers=[];
       //Création de la carte
       var carte=new google.maps.Map(document.getElementById('carte'), options);
       //Chercher le fichier JSON
@@ -123,6 +125,16 @@
         zoom:niv_zoom,
         center:{lat:latitude,lng:longitude}
       }
+      update();
+    }
+    augmenter=function(){
+      slider.stepUp(1);
+      output.innerHTML = slider.value;
+      update();
+    }
+    diminuer=function(){
+      slider.stepDown(1);
+      output.innerHTML = slider.value;
       update();
     }
   }
