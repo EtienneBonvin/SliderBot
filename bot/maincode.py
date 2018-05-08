@@ -9,7 +9,8 @@ from geopy import *
 from geopy.geocoders import *
 from html.parser import HTMLParser
 import unicodedata
-
+from nltk import ne_chunk, pos_tag, word_tokenize
+from nltk.tree import Tree
 #from calais.base.client import Calais
 
 # oldest year found : 1765
@@ -36,7 +37,12 @@ def masterFunction(year):
         if len(string) < 20 and string.istitle():
             #result = api.analyze('"""' + string + '"""')
             #return 'entities' in result
-            return True
+            for chunk in ne_chunk(pos_tag(word_tokenize(string))):
+                if hasattr(chunk, 'label'):
+                    if chunk.label() == 'PERSON':
+                        print(' '.join(c[0] for c in chunk))
+                        return True
+
         return False
 
     def remove_accents(input_str):
