@@ -29,7 +29,7 @@
   <h1 id="titre">SliderBot</h1>
   <div id="carte"></div>
   <div>
-    <input type="range" min="1600" max="2018" value="1809" id="slider_annee">
+    <input type="range" min="1600" max="2018" value="1901" id="slider_annee">
   </div>
   <div>
     <button onclick="diminuer()">-</button>
@@ -81,7 +81,7 @@
       var carte=new google.maps.Map(document.getElementById('carte'), options);
       //Chercher le fichier JSON
       //var requestURL='https://gist.githubusercontent.com/mael'+String(slider.value)+'/1ba075b58fd3a4052ea758de1bebdf0a/raw/32b1c865e015e6afbfedc0c6868276bdf6924f15/newtest.json';
-      var requestURL = 'https://raw.githubusercontent.com/EtienneBonvin/SliderBot/master/bot/test3.json?token=AkepwPQgvu2SYxxYwjz6qWwRGDpuAMH8ks5a-qBLwA%3D%3D';
+      var requestURL = 'https://raw.githubusercontent.com/EtienneBonvin/SliderBot/master/server/maps/'+String(slider.value)+'.json';
       var request = new XMLHttpRequest();
       request.open('GET', requestURL);
       request.responseType = 'json';
