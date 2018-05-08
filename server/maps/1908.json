@@ -1,0 +1,20 @@
+[
+    {
+       "proprietes" : ["['Naissance']",48.8566101,2.3514992]
+    },
+    {
+       "proprietes" : ["['Hospitalisation', 'Thomas Edison']",40.7306458,-73.9866136]
+    },
+    {
+       "proprietes" : ["['Election', 'Winston Churchill', 'Ministre']",51.5073219,-0.1276474]
+    },
+    {
+       "proprietes" : ["['Election', 'Ministre']",51.5073219,-0.1276474]
+    },
+    {
+       "proprietes" : ["['Mariage', 'Winston Churchill', 'Clementine Hozier']",51.5073219,-0.1276474]
+    },
+    {
+       "proprietes" : ["['Mariage', 'Clementine Hozier']",51.5073219,-0.1276474]
+    }
+]
