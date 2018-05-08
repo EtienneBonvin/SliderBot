@@ -4,6 +4,9 @@
 
 const express = require('express');
 const app = express();
+var fs = require('fs');
+
+var response = "File not found";
 
 app.post('/', function(req, res){
     // Use post for now.
@@ -12,12 +15,19 @@ app.post('/', function(req, res){
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     req.on('data', function (chunk) {
         var buffer = JSON.stringify(chunk);
-        var data = getData(buffer);
+        var data = JSON.parse(getData(buffer));
     
         console.log('GOT DATA : '+data);
+        var year = data.year;
+        console.log('Requested year : '+year);
         
+        var parsed = JSON.parse(fs.readFileSync('maps/'+year+'.json', 'utf8'));
+        console.log(parsed);
+        response = JSON.stringify(parsed);
+        console.log(response);
+        res.end(JSON.stringify({"data":response}));
     });
-    res.end(JSON.stringify({"data":0}));
+    
 });
 
 app.get('/', function(req, res){

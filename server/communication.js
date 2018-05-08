@@ -4,7 +4,7 @@
 */
 
 var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
-var IP_ADDRESSE = "128.179.181.85";
+var IP_ADDRESSE = "128.179.183.121";
 var PORT = "3000";
 
 function sendReq(){
@@ -31,7 +31,7 @@ function sendReq(){
         console.log("Error on communication.");
     };
 
-    request.send(JSON.stringify({"year":1996}));
+    request.send(JSON.stringify({"year":1765}));
 }   
 
 sendReq();
