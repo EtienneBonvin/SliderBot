@@ -26,7 +26,7 @@ def masterFunction(year):
     soup=BeautifulSoup(page_source,'html.parser')
     stringSoup = str(soup)
     geolocator = Nominatim()
-    nlp = spacy.load('fr')
+    nlp = spacy.load('fr_core_news_sm')
 
     #=============Parsing===============
 
@@ -66,8 +66,8 @@ def masterFunction(year):
                         for attr in attrs:
                             if str(attr[0]) == 'title':
                                 persons = [token for token in nlp(attr[1]) if token.ent_type_ == 'PERSON']
-                                print('Sentence : ' + attr[1])
-                                print('Tokens : '+ persons)
+                                print('Sentence : ' + str(attr[1]))
+                                print('Tokens : '+ str(persons))
 
             parser = MyHTMLParser()
             parser.feed(skipCity)
