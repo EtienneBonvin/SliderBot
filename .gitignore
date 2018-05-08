@@ -1,4 +1,3 @@
-bot/__pycache__
-*.json
+ bot/__pycache__
 .git
 !bot/test.json
