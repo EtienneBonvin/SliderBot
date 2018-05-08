@@ -34,7 +34,7 @@ def masterFunction(year):
 
     """check that every word starts with upperletter and max length of 20 chars"""
     def isName(string):
-        if len(string) < 20 and string.istitle():
+        if string.istitle():
             #result = api.analyze('"""' + string + '"""')
             #return 'entities' in result
             for chunk in ne_chunk(pos_tag(word_tokenize(string))):
@@ -89,7 +89,6 @@ def masterFunction(year):
                     if tag == 'a':
                         for attr in attrs:
                             if str(attr[0]) == 'title':
-
                                 if isName(attr[1]):
                                     self.data.append(attr[1])
 
@@ -186,4 +185,4 @@ def masterFunction(year):
 
     createJson(finalNameCoordTuple(createCoreList()),year)
 
-masterFunction(1962)
+masterFunction(1945)
