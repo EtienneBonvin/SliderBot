@@ -8,7 +8,9 @@ from countries import countries
 from geopy import *
 from geopy.geocoders import *
 from html.parser import HTMLParser
-import spacy
+import unicodedata
+
+#from calais.base.client import Calais
 
 # oldest year found : 1765
 # isnumeric() pour détecter si la date est bien récupéree
@@ -26,7 +28,21 @@ def masterFunction(year):
     soup=BeautifulSoup(page_source,'html.parser')
     stringSoup = str(soup)
     geolocator = Nominatim()
-    nlp = spacy.load('fr_core_news_sm')
+
+    #=============String===============
+
+    """check that every word starts with upperletter and max length of 20 chars"""
+    def isName(string):
+        if len(string) < 20 and string.istitle():
+            #result = api.analyze('"""' + string + '"""')
+            #return 'entities' in result
+            return True
+        return False
+
+    def remove_accents(input_str):
+        nfkd_form = unicodedata.normalize('NFKD', input_str)
+        return u"".join([c for c in nfkd_form if not unicodedata.combining(c)])
+
 
     #=============Parsing===============
 
@@ -44,6 +60,7 @@ def masterFunction(year):
         return divStart
 
     def getYearCityAndName(div):
+
         tagDate = div[div.index("<a"):div.index("</a>")]
         date = tagDate[tagDate.index(">") + 1:]
         year = date.split(".")[0]
@@ -51,7 +68,7 @@ def masterFunction(year):
         if not year.isnumeric():
             return
 
-        if div[div.index("</a>") + 7] == '-':
+        if div[div.index("</a>") + 7] == '-' or div[div.index("</a>") + 4] == '.' or div[div.index("</a>") + 7] == ' ':
             return
         else:
             skipDate = div[div.index("<a")+ 2:]
@@ -61,24 +78,21 @@ def masterFunction(year):
             skipCity = tagCityStart[tagCityStart.index("</a>")+6:tagCityStart.index("</li>")]
 
             class MyHTMLParser(HTMLParser):
+                data = []
                 def handle_starttag(self, tag, attrs):
                     if tag == 'a':
                         for attr in attrs:
                             if str(attr[0]) == 'title':
-                                persons = [token for token in nlp(attr[1]) if token.ent_type_ == 'PERSON']
-                                print('Sentence : ' + str(attr[1]))
-                                print('Tokens : '+ str(persons))
+
+                                if isName(attr[1]):
+                                    self.data.append(attr[1])
 
             parser = MyHTMLParser()
             parser.feed(skipCity)
+            if len(parser.data) != 0:
+                #print(year, city, parser.data)
+                return (year, city, parser.data)
 
-            """
-            tagDivStart = skipCity[skipCity.index("<a"):]
-            tagDiv = tagDivStart[:tagDivStart.index("</a>")]
-            divName = tagDiv[tagDiv.index(">") + 1:]
-            print(divName)"""
-
-            return (year, city)
 
     #===========Location===========
 
@@ -100,7 +114,7 @@ def masterFunction(year):
         output = []
         for tuple in tuples:
             coord = geolocator.geocode(capitalIfCountry(tuple[1]))
-            output.append(['None', coord.latitude, coord.longitude])
+            output.append([tuple[2], coord.latitude, coord.longitude])
         return output
 
     #=============Print=============
@@ -127,34 +141,43 @@ def masterFunction(year):
 
     #===========JSON file===========
 
-    def createJsonFile(tuples, year):
+    def createJson(inputData, year):
         """
-        Creates a JSON file 'year.json' containing [Name, latitude, longitude] arrays
+        Takes array [Name, lat, long] for each year
+        Outputs in .json such that it can be plotted
         """
+        indent = '    '
+        indent2 = '      '
+        maxLimit = len(inputData)
         with open(str(year)+'.json', 'w') as outfile:
-            json.dump(tuples, outfile, indent=4)
+            outfile.write('['+'\n')
+            for i in range (maxLimit):
+                if i == (maxLimit-1):
+                        outfile.write(indent + '{'+'\n')
+                        outfile.write(indent2 + ' "proprietes" : '+'['+'"'+remove_accents(str(inputData[i][0]))+'"'+ ','+ str(inputData[i][1])+ ','+ str(inputData[i][2])+']'+'\n')
+                        outfile.write(indent + '}'+'\n')
+                else:
+                    outfile.write(indent + '{'+'\n')
+                    outfile.write(indent2 + ' "proprietes" : '+'['+'"'+remove_accents(str(inputData[i][0]))+'"'+ ','+ str(inputData[i][1])+ ','+ str(inputData[i][2])+']'+'\n')
+                    outfile.write(indent + '}'+','+'\n')
+
+            outfile.write(']')
+        outfile.close()
 
     def createCoreList():
         counter = 1
         divDate = getNthDiv(stringSoup, counter)
-        yearCityList = []
+        yearCityNameList = []
         while divDate != None:
             element = getYearCityAndName(divDate)
             if element is not None:
-                yearCityList.append(element)
+                yearCityNameList.append(element)
             counter += 1
             divDate = getNthDiv(stringSoup, counter)
 
-        return yearCityList
+        return yearCityNameList
 
-    createJsonFile(finalNameCoordTuple(createCoreList()), year)
 
-masterFunction(1960)
+    createJson(finalNameCoordTuple(createCoreList()),year)
 
-#======Looping Test=======
-
-# for yearIndex in range (1960,1970):
-#     time.sleep(10)
-#     print('Doing ' + str(yearIndex))
-#     time.sleep(20)
-#     masterFunction(yearIndex)
+masterFunction(1962)
