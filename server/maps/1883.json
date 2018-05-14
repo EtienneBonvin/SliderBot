@@ -1,14 +1,11 @@
 [
     {
-       "proprietes" : ["['Condamnation', 'Louise Michel', 'Prison', 'Manifestation']",48.8566101,2.3514992]
+       "proprietes" : ["Louise Michel",48.8566101,2.3514992,"test"]
     },
     {
-       "proprietes" : ["['Proces', 'Louise Michel', 'Propagande', 'Anarchiste']",48.8566101,2.3514992]
+       "proprietes" : ["Louise Michel",48.8616101,2.3564992]
     },
     {
-       "proprietes" : ["['Naissance', 'Benito Mussolini']",44.525696,11.039437]
-    },
-    {
-       "proprietes" : ["['Naissance']",44.525696,11.039437]
+       "proprietes" : ["Benito Mussolini",44.525696,11.039437]
     }
 ]
