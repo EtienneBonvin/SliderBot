@@ -40,7 +40,7 @@ def masterFunction(year):
             for chunk in ne_chunk(pos_tag(word_tokenize(string))):
                 if hasattr(chunk, 'label'):
                     if chunk.label() == 'PERSON':
-                        print(' '.join(c[0] for c in chunk))
+                        #print(' '.join(c[0] for c in chunk))
                         return True
 
         return False
@@ -111,6 +111,14 @@ def masterFunction(year):
         else:
             return location
 
+    def repulsePoints(tuples):
+        for i in range (len(tuples)):
+            for j in range (len(tuples)):
+                if (i != j and tuples[i][1] == tuples[j][1] and tuples[i][2] == tuples[j][2]):
+                    tuples[j][1] = tuples[i][1] + 0.005
+                    tuples[j][2] = tuples[i][2] + 0.005
+        return tuples
+
     def finalNameCoordTuple(tuples):
         """
         Produces an array 'output' containing [Name, latitude, longitude]
@@ -118,9 +126,15 @@ def masterFunction(year):
         """
         output = []
         for tuple in tuples:
+            strNames = (tuple[2][0])
             coord = geolocator.geocode(capitalIfCountry(tuple[1]))
-            output.append([tuple[2], coord.latitude, coord.longitude])
-        return output
+            if(len(tuple[2])==1):
+                output.append([strNames, coord.latitude, coord.longitude])
+            else:
+                for j in range (1,len(tuple[2])):
+                    strNames+=', ' +(tuple[2][j])
+                output.append([strNames, coord.latitude, coord.longitude])
+        return repulsePoints(output)
 
     #=============Print=============
 
@@ -182,7 +196,8 @@ def masterFunction(year):
 
         return yearCityNameList
 
-
+    #print(createCoreList())
+    #print(finalNameCoordTuple(createCoreList()))
     createJson(finalNameCoordTuple(createCoreList()),year)
 
-masterFunction(1945)
+masterFunction(1883)
