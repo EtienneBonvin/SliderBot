@@ -1,14 +1,11 @@
 [
     {
-       "proprietes" : ["['Distinction', 'Bobby Fischer']",38.8949549,-77.0366456]
+       "proprietes" : ["Bobby Fischer",38.8949549,-77.0366456]
     },
     {
-       "proprietes" : ["['Distinction']",38.8949549,-77.0366456]
+       "proprietes" : ["Bobby Fischer",64.145981,-21.9422367]
     },
     {
-       "proprietes" : ["['Bobby Fischer']",64.145981,-21.9422367]
-    },
-    {
-       "proprietes" : ["['Invitation', 'Bobby Fischer', 'Maison Blanche', 'Nixon']",38.8949549,-77.0366456]
+       "proprietes" : ["Bobby Fischer, Maison Blanche",38.899954900000004,-77.0316456]
     }
 ]

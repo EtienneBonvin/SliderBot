@@ -1,23 +1,23 @@
 [
     {
-       "proprietes" : ["['Distinction', 'Dr Honoris Causa']",46.5218269,6.6327025]
+       "proprietes" : ["Dr Honoris Causa",46.5218269,6.6327025]
     },
     {
-       "proprietes" : ["['Distinction', 'Dr Honoris Causa', 'Claude Nicollier']",46.5218269,6.6327025]
+       "proprietes" : ["Dr Honoris Causa, Claude Nicollier",46.5268269,6.6377025]
     },
     {
-       "proprietes" : ["['Magic Johnson', 'Palexpo', 'Suisse']",46.2017559,6.1466014]
+       "proprietes" : ["Magic Johnson",46.2017559,6.1466014]
     },
     {
-       "proprietes" : ["['Mission', 'Claude Nicollier']",28.45077,-80.52662]
+       "proprietes" : ["Claude Nicollier",28.45077,-80.52662]
     },
     {
-       "proprietes" : ["['Mission', 'Claude Nicollier']",28.4120009,77.0649962]
+       "proprietes" : ["Claude Nicollier",28.4120009,77.0649962]
     },
     {
-       "proprietes" : ["['Retour', 'Claude Nicollier']",28.45077,-80.52662]
+       "proprietes" : ["Claude Nicollier",28.455769999999998,-80.52162]
     },
     {
-       "proprietes" : ["['Retour', 'Claude Nicollier', 'Record']",28.45077,-80.52662]
+       "proprietes" : ["Claude Nicollier",28.460769999999997,-80.51662]
     }
 ]

@@ -1,14 +1,11 @@
 [
     {
-       "proprietes" : ["['Joseph Staline', 'Election']",53.902334,27.5618791]
+       "proprietes" : ["Joseph Staline",53.902334,27.5618791]
     },
     {
-       "proprietes" : ["['Victoire', 'Ferrari']",42.7887447,-0.9239579]
+       "proprietes" : ["Arthur Honegger",48.8566101,2.3514992]
     },
     {
-       "proprietes" : ["['Distinction', 'Prix Hector Berlioz', 'Arthur Honegger']",48.8566101,2.3514992]
-    },
-    {
-       "proprietes" : ["['Naissance', 'Prince Charles']",51.5073219,-0.1276474]
+       "proprietes" : ["Prince Charles",51.5073219,-0.1276474]
     }
 ]

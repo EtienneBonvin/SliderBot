@@ -1,38 +1,11 @@
 [
     {
-       "proprietes" : ["['Lenine', 'Petrograd', 'Russie', 'Allemagne', 'Suede', 'Entente', 'Russie']",46.7985624,8.2319736]
+       "proprietes" : ["Alexis Nicolajevitch, Michel Alexandrovitch",57.5358729,28.8586826]
     },
     {
-       "proprietes" : ["['Abdiction']",57.5358729,28.8586826]
+       "proprietes" : ["John Fitzgerald Kennedy",42.3317642,-71.1211635]
     },
     {
-       "proprietes" : ["['Arrestation']",61.6081847,12.2393388]
-    },
-    {
-       "proprietes" : ["['Fortune']",61.6081847,12.2393388]
-    },
-    {
-       "proprietes" : ["['Naissance']",42.3317642,-71.1211635]
-    },
-    {
-       "proprietes" : ["['Election', 'Ministre']",51.5073219,-0.1276474]
-    },
-    {
-       "proprietes" : ["['Election', 'Winston Churchill', 'Ministre']",51.5073219,-0.1276474]
-    },
-    {
-       "proprietes" : ["['Lenine', 'Russie']",64.6863136,97.7453061]
-    },
-    {
-       "proprietes" : ["['Russie', 'Petrograd']",61.6081847,12.2393388]
-    },
-    {
-       "proprietes" : ["['Maximalistes', 'Lenine']",61.6081847,12.2393388]
-    },
-    {
-       "proprietes" : ["['Lenine', 'Petrograd']",61.6081847,12.2393388]
-    },
-    {
-       "proprietes" : ["['Russie']",64.6863136,97.7453061]
+       "proprietes" : ["Winston Churchill",51.5073219,-0.1276474]
     }
 ]

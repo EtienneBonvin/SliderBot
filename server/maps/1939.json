@@ -1,20 +1,17 @@
 [
     {
-       "proprietes" : ["['Hommage', 'Adolf Hitler', 'Asturies']",43.3533424,-5.87951433952683]
+       "proprietes" : ["Adolf Hitler",43.3533424,-5.87951433952683]
     },
     {
-       "proprietes" : ["['Election']",51.5073219,-0.1276474]
+       "proprietes" : ["Winston Churchill",51.5073219,-0.1276474]
     },
     {
-       "proprietes" : ["['Election', 'Winston Churchill']",51.5073219,-0.1276474]
+       "proprietes" : ["Franklin D. Roosevelt",38.8949549,-77.0366456]
     },
     {
-       "proprietes" : ["['Pologne']",38.8949549,-77.0366456]
+       "proprietes" : ["Sigmund Freud",51.5123219,-0.12264739999999999]
     },
     {
-       "proprietes" : ["['Deces', 'Sigmund Freud']",51.5073219,-0.1276474]
-    },
-    {
-       "proprietes" : ["['Deces', 'Sigmund Freud']",51.5073219,-0.1276474]
+       "proprietes" : ["Sigmund Freud",51.517321900000006,-0.11764739999999999]
     }
 ]

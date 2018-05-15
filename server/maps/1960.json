@@ -1,17 +1,14 @@
 [
     {
-       "proprietes" : ["['Naissance', 'Prince Andrew']",51.5073219,-0.1276474]
+       "proprietes" : ["Prince Andrew",51.5073219,-0.1276474]
     },
     {
-       "proprietes" : ["['Distinction', 'Auguste Piccard']",46.5218269,6.6327025]
+       "proprietes" : ["Auguste Piccard",46.5218269,6.6327025]
     },
     {
-       "proprietes" : ["['Distinction']",52.7954791,-0.540240286617432]
+       "proprietes" : ["Le Corbusier, Maroc, Moulay Hassan",34.022405,-6.834543]
     },
     {
-       "proprietes" : ["['Invitation', 'Le Corbusier', 'Maroc', 'Moulay Hassan']",33.96689355,-6.84266275862037]
-    },
-    {
-       "proprietes" : ["['Invitation', 'Maroc', 'Moulay Hassan']",33.96689355,-6.84266275862037]
+       "proprietes" : ["Maroc, Moulay Hassan",34.027405,-6.829543]
     }
 ]

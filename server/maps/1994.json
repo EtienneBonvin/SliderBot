@@ -1,35 +1,23 @@
 [
     {
-       "proprietes" : ["['Concert', 'Phil Collins']",46.5218269,6.6327025]
+       "proprietes" : ["Phil Collins",46.5218269,6.6327025]
     },
     {
-       "proprietes" : ["['Victoire', 'Michael Schumacher']",43.63071345,7.47616101640138]
+       "proprietes" : ["Michael Schumacher",43.63071345,7.47616101640138]
     },
     {
-       "proprietes" : ["['Victoire', 'Grand Prix']",43.63071345,7.47616101640138]
+       "proprietes" : ["Claude Nicollier",46.0222273,7.7494002]
     },
     {
-       "proprietes" : ["['Suspension', 'Grands Prix']",48.8566101,2.3514992]
+       "proprietes" : ["Bill Gates",45.2902333,5.8857912]
     },
     {
-       "proprietes" : ["['Claude Nicollier', 'Cervin']",46.0222273,7.7494002]
+       "proprietes" : ["Michael Schumacher",36.6816936,-6.1377402]
     },
     {
-       "proprietes" : ["['Bill Gates']",45.2902333,5.8857912]
+       "proprietes" : ["Michael Schumacher",-34.9274284,138.599899]
     },
     {
-       "proprietes" : ["['Victoire', 'Grand Prix']",36.6816936,-6.1377402]
-    },
-    {
-       "proprietes" : ["['Victoire', 'Michael Schumacher']",36.6816936,-6.1377402]
-    },
-    {
-       "proprietes" : ["['Paris', 'Exposition', 'Herge']",48.87215,21.7194258]
-    },
-    {
-       "proprietes" : ["['Victoire', 'Michael Schumacher']",-34.9274284,138.599899]
-    },
-    {
-       "proprietes" : ["['Vainqueur', 'Grand Prix', 'Australie', 'Michael Schumacher']",-34.9274284,138.599899]
+       "proprietes" : ["Michael Schumacher",-34.922428399999994,138.604899]
     }
 ]

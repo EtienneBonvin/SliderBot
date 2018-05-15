@@ -1,26 +1,17 @@
 [
     {
-       "proprietes" : ["['Deces']",51.5073219,-0.1276474]
+       "proprietes" : ["Winston Churchill",51.5073219,-0.1276474]
     },
     {
-       "proprietes" : ["['Deces', 'Winston Churchill']",51.5073219,-0.1276474]
+       "proprietes" : ["Ernesto Rafael Guevara",39.9059631,116.391248]
     },
     {
-       "proprietes" : ["['Arrivee', 'Pekin']",39.9059631,116.391248]
+       "proprietes" : ["Ernesto Rafael Guevara",44.370353,6.0608068]
     },
     {
-       "proprietes" : ["['Arrivee', 'Cuba']",44.370353,6.0608068]
+       "proprietes" : ["John Lennon",50.99474235,3.77485505234394]
     },
     {
-       "proprietes" : ["['John Lennon']",50.99474235,3.77485505234394]
-    },
-    {
-       "proprietes" : ["['Deces', 'Le Corbusier']",43.7641047,7.4565697]
-    },
-    {
-       "proprietes" : ["['Deces']",43.7641047,7.4565697]
-    },
-    {
-       "proprietes" : ["['Creation']",46.2017559,6.1466014]
+       "proprietes" : ["Le Corbusier",43.7641047,7.4565697]
     }
 ]

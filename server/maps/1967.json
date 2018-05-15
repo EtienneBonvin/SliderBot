@@ -1,14 +1,14 @@
 [
     {
-       "proprietes" : ["['Deces', 'Robert Oppenheimer']",40.3492744,-74.6592958]
+       "proprietes" : ["Robert Oppenheimer",40.3492744,-74.6592958]
     },
     {
-       "proprietes" : ["['Enzo Ferrari']",44.5255217,10.8663607]
+       "proprietes" : ["Enzo Ferrari",44.5255217,10.8663607]
     },
     {
-       "proprietes" : ["['Annonce', 'Enzo Ferrari', 'Lorenzo Bandini', 'Ferrari']",44.5255217,10.8663607]
+       "proprietes" : ["Enzo Ferrari, Lorenzo Bandini",44.5305217,10.8713607]
     },
     {
-       "proprietes" : ["['Deces']",-17.0568696,-64.9912286]
+       "proprietes" : ["Ernesto Rafael Guevara",-17.0568696,-64.9912286]
     }
 ]

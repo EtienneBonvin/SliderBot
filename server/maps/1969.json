@@ -1,50 +1,41 @@
 [
     {
-       "proprietes" : ["['Naissance', 'Michael Schumacher']",50.8803557,6.8947113]
+       "proprietes" : ["Michael Schumacher",50.8803557,6.8947113]
     },
     {
-       "proprietes" : ["['John Lennon', 'Yoko Ono', 'Hotel Hilton']",52.3745403,4.89797550561798]
+       "proprietes" : ["John Lennon, Hotel Hilton",52.3745403,4.89797550561798]
     },
     {
-       "proprietes" : ["['Demission']",48.8566101,2.3514992]
+       "proprietes" : ["Steffi Graf",51.0834196,10.4234469]
     },
     {
-       "proprietes" : ["['Naissance', 'Steffi Graf']",51.0834196,10.4234469]
+       "proprietes" : ["Steffi Graf",51.0884196,10.4284469]
     },
     {
-       "proprietes" : ["['Naissance', 'Steffi Graf']",51.0834196,10.4234469]
+       "proprietes" : ["Enzo Ferrari, Giovanni Agnelli",45.0677551,7.6824892]
     },
     {
-       "proprietes" : ["['Annonce', 'Enzo Ferrari', 'Giovanni Agnelli']",45.0677551,7.6824892]
+       "proprietes" : ["Enzo Ferrari, Francesco Bellicardi",44.5255217,10.8663607]
     },
     {
-       "proprietes" : ["['Enzo Ferrari']",44.5255217,10.8663607]
+       "proprietes" : ["Sharon Tate, Roman Polanski",34.054935,-118.244476]
     },
     {
-       "proprietes" : ["['Meurtre', 'Sharon Tate', 'Roman Polanski']",34.054935,-118.244476]
+       "proprietes" : ["Roman Polanski",34.059935,-118.23947600000001]
     },
     {
-       "proprietes" : ["['Recuperation', 'Roman Polanski']",34.054935,-118.244476]
+       "proprietes" : ["Guido Inti Peredo, Ernesto Rafael Guevara",-16.4956371,-68.1336346]
     },
     {
-       "proprietes" : ["['Deces', 'Guido Inti Peredo']",-16.4956371,-68.1336346]
+       "proprietes" : ["Guido Inti Peredo",-16.4906371,-68.1286346]
     },
     {
-       "proprietes" : ["['Deces', 'Guido Inti Peredo']",-16.4956371,-68.1336346]
+       "proprietes" : ["Charles «Tex» Watson, Patricia Kernwinkel, Linda Louise Kasabian",34.064935000000006,-118.23447600000002]
     },
     {
-       "proprietes" : ["['Grande-Bretagne', 'Vietnam', 'Nigeria']",23.1319431,-82.3999067]
+       "proprietes" : ["Charles «Tex» Watson, Patricia Kernwinkel, Linda Louise Kasabian, Roman Polanski",34.06993500000001,-118.22947600000002]
     },
     {
-       "proprietes" : ["['Arrestation', 'Patricia Kernwinkel']",34.054935,-118.244476]
-    },
-    {
-       "proprietes" : ["['Arrestation', 'Patricia Kernwinkel', 'Roman Polanski']",34.054935,-118.244476]
-    },
-    {
-       "proprietes" : ["['Noel']",23.1319431,-82.3999067]
-    },
-    {
-       "proprietes" : ["['Sejour', 'Roman Polanski', 'Gstaad']",46.4740433,7.2857944]
+       "proprietes" : ["Roman Polanski",46.4740433,7.2857944]
     }
 ]

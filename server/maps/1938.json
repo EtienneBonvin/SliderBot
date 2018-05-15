@@ -1,11 +1,8 @@
 [
     {
-       "proprietes" : ["['Invitation', 'Frohlicher', 'Berlin', 'Adolf Hitler']",52.5170365,13.3888599]
+       "proprietes" : ["Berlin, Adolf Hitler",52.5170365,13.3888599]
     },
     {
-       "proprietes" : ["['Saisie', 'Sigmund Freud']",48.2083537,16.3725042]
-    },
-    {
-       "proprietes" : ["['Lancement']",41.8933203,12.4829321]
+       "proprietes" : ["Sigmund Freud",48.2083537,16.3725042]
     }
 ]

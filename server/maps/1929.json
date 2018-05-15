@@ -1,14 +1,5 @@
 [
     {
-       "proprietes" : ["['Creation', 'Herge']",50.8465573,4.351697]
-    },
-    {
-       "proprietes" : ["['Maladie']",50.3903852,3.8661496]
-    },
-    {
-       "proprietes" : ["['Trotsky']",50.3903852,3.8661496]
-    },
-    {
-       "proprietes" : ["['Joseph Staline']",-20.2248896,-40.2241907]
+       "proprietes" : ["Joseph Staline",-20.2248896,-40.2241907]
     }
 ]
