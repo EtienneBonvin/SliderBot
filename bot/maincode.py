@@ -10,7 +10,8 @@ from geopy.geocoders import *
 from html.parser import HTMLParser
 import unicodedata
 from nltk import ne_chunk, pos_tag, word_tokenize
-from nltk.tree import Tree
+from functools import reduce
+
 #from calais.base.client import Calais
 
 # oldest year found : 1765
@@ -34,13 +35,13 @@ def masterFunction(year):
 
     """check that every word starts with upperletter and max length of 20 chars"""
     def isName(string):
-        if string.istitle():
-            #result = api.analyze('"""' + string + '"""')
-            #return 'entities' in result
-            for chunk in ne_chunk(pos_tag(word_tokenize(string))):
+        words = [y for y in string.split() if not y.isupper()]
+        string_upd = remove_accents(" ".join(words))
+        if string_upd.istitle():
+            for chunk in ne_chunk(pos_tag(word_tokenize(remove_accents(string)))):
                 if hasattr(chunk, 'label'):
                     if chunk.label() == 'PERSON':
-                        #print(' '.join(c[0] for c in chunk))
+                        print(' '.join(c[0] for c in chunk))
                         return True
 
         return False
@@ -95,7 +96,6 @@ def masterFunction(year):
             parser = MyHTMLParser()
             parser.feed(skipCity)
             if len(parser.data) != 0:
-                #print(year, city, parser.data)
                 return (year, city, parser.data)
 
 
@@ -111,14 +111,6 @@ def masterFunction(year):
         else:
             return location
 
-    def repulsePoints(tuples):
-        for i in range (len(tuples)):
-            for j in range (len(tuples)):
-                if (i != j and tuples[i][1] == tuples[j][1] and tuples[i][2] == tuples[j][2]):
-                    tuples[j][1] = tuples[i][1] + 0.005
-                    tuples[j][2] = tuples[i][2] + 0.005
-        return tuples
-
     def finalNameCoordTuple(tuples):
         """
         Produces an array 'output' containing [Name, latitude, longitude]
@@ -126,15 +118,9 @@ def masterFunction(year):
         """
         output = []
         for tuple in tuples:
-            strNames = (tuple[2][0])
             coord = geolocator.geocode(capitalIfCountry(tuple[1]))
-            if(len(tuple[2])==1):
-                output.append([strNames, coord.latitude, coord.longitude])
-            else:
-                for j in range (1,len(tuple[2])):
-                    strNames+=', ' +(tuple[2][j])
-                output.append([strNames, coord.latitude, coord.longitude])
-        return repulsePoints(output)
+            output.append([tuple[2], coord.latitude, coord.longitude])
+        return output
 
     #=============Print=============
 
@@ -196,8 +182,7 @@ def masterFunction(year):
 
         return yearCityNameList
 
-    #print(createCoreList())
-    #print(finalNameCoordTuple(createCoreList()))
+
     createJson(finalNameCoordTuple(createCoreList()),year)
 
-masterFunction(1883)
+masterFunction(1943)
