@@ -1,8 +1,11 @@
 [
     {
-       "proprietes" : ["Henry Dunant",33.12293445,-117.078115263989]
+       "proprietes" : ["Napoleon III",33.12293445,-117.078115263989]
     },
     {
-       "proprietes" : ["Henry Dunant",33.127934450000005,-117.07311526398901]
+       "proprietes" : ["Henry Dunant, Napoleon III",33.127934450000005,-117.07311526398901]
+    },
+    {
+       "proprietes" : ["Henry Dunant",33.13293445000001,-117.06811526398901]
     }
 ]

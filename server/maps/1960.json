@@ -1,9 +1,12 @@
 [
     {
-       "proprietes" : ["Prince Andrew",51.5073219,-0.1276474]
+       "proprietes" : ["Prince Andrew, Elisabeth II",51.5073219,-0.1276474]
     },
     {
        "proprietes" : ["Auguste Piccard",46.5218269,6.6327025]
+    },
+    {
+       "proprietes" : ["Elisabeth II",52.7954791,-0.540240286617432]
     },
     {
        "proprietes" : ["Le Corbusier, Maroc, Moulay Hassan",34.022405,-6.834543]
