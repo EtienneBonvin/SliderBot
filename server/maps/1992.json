@@ -1,41 +1,38 @@
 [
     {
-       "proprietes" : ["['Distinction', 'Prix Alphart', 'Bill Watterson', 'Herge']",45.6496755,0.1568658]
+       "proprietes" : ["Bill Watterson",45.6496755,0.1568658]
     },
     {
-       "proprietes" : ["['Invitation', 'Claude Nicollier']",46.9482713,7.4514512]
+       "proprietes" : ["Claude Nicollier",46.9482713,7.4514512]
     },
     {
-       "proprietes" : ["['Annonce']",40.7306458,-73.9866136]
+       "proprietes" : ["Claude Nicollier",3.7638983,11.193782]
     },
     {
-       "proprietes" : ["['Mission', 'Claude Nicollier']",3.7638983,11.193782]
+       "proprietes" : ["Phil Collins",51.8658893,-0.1844945]
     },
     {
-       "proprietes" : ["['Concert', 'Phil Collins', 'Knebworth']",51.8658893,-0.1844945]
+       "proprietes" : ["Claude Nicollier",47.0505452,8.3054682]
     },
     {
-       "proprietes" : ["['Claude Nicollier']",47.0505452,8.3054682]
+       "proprietes" : ["Arthur Honegger, Musee Strauhof",49.46694275,8.52469497141517]
     },
     {
-       "proprietes" : ["['Zurich', 'Exposition', 'Arthur Honegger', 'Musee Strauhof']",49.46694275,8.52469497141517]
+       "proprietes" : ["Michael Schumacher",50.4531568,5.952833]
     },
     {
-       "proprietes" : ["['Anniversaire', 'Michael Schumacher']",50.4531568,5.952833]
+       "proprietes" : ["Claude Nicollier",28.45077,-80.52662]
     },
     {
-       "proprietes" : ["['Retour', 'Claude Nicollier']",28.45077,-80.52662]
+       "proprietes" : ["Claude Nicollier",28.455769999999998,-80.52162]
     },
     {
-       "proprietes" : ["['Retour', 'Claude Nicollier']",28.45077,-80.52662]
+       "proprietes" : ["Claude Nicollier",46.5218269,6.6327025]
     },
     {
-       "proprietes" : ["['Distinction', 'Claude Nicollier']",46.5218269,6.6327025]
+       "proprietes" : ["Steffi Graf",40.7306458,-73.9866136]
     },
     {
-       "proprietes" : ["['Elimination', 'Steffi Graf', 'Masters']",40.7306458,-73.9866136]
-    },
-    {
-       "proprietes" : ["['Distinction', 'Pro Aero', 'Claude Nicollier']",47.3968244,8.6183023]
+       "proprietes" : ["Claude Nicollier",47.3968244,8.6183023]
     }
 ]

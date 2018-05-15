@@ -183,7 +183,7 @@ def masterFunction(year):
         indent = '    '
         indent2 = '      '
         maxLimit = len(inputData)
-        with open(str(year)+'.json', 'w') as outfile:
+        with open("../server/maps/"+str(year)+'.json', 'w') as outfile:
             outfile.write('['+'\n')
             for i in range (maxLimit):
                 if i == (maxLimit-1):
