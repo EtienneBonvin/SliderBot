@@ -1,11 +1,11 @@
 [
     {
-       "proprietes" : ["['Enzo Ferrari']",44.5255217,10.8663607]
+       "proprietes" : ["Enzo Ferrari",44.5255217,10.8663607]
     },
     {
-       "proprietes" : ["['Deces', 'Enzo Ferrari']",44.5255217,10.8663607]
+       "proprietes" : ["Enzo Ferrari",44.5305217,10.8713607]
     },
     {
-       "proprietes" : ["['Academie Francaise']",-17.0561111,144.57]
+       "proprietes" : ["Academie Francaise",-17.0561111,144.57]
     }
 ]

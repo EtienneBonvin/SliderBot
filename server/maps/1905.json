@@ -1,14 +1,5 @@
 [
     {
-       "proprietes" : ["['Deces', 'Louise Michel']",43.2961743,5.3699525]
-    },
-    {
-       "proprietes" : ["['Hohenzollern']",60.366665,28.616673]
-    },
-    {
-       "proprietes" : ["['Allemagne']",60.366665,28.616673]
-    },
-    {
-       "proprietes" : ["['Constitution', 'Russie']",59.938732,30.316229]
+       "proprietes" : ["Louise Michel",43.2961743,5.3699525]
     }
 ]

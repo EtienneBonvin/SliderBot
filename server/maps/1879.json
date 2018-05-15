@@ -1,20 +1,17 @@
 [
     {
-       "proprietes" : ["['Naissance', 'Albert Einstein']",48.3973944,9.9932755]
+       "proprietes" : ["Albert Einstein",48.3973944,9.9932755]
     },
     {
-       "proprietes" : ["['Georges Clemenceau', 'Petition', 'Amnistie', 'Louise Michel']",43.4017377,3.6941845]
+       "proprietes" : ["Georges Clemenceau, Louise Michel",43.4017377,3.6941845]
     },
     {
-       "proprietes" : ["['Representation', 'Opera', 'Niebelungen', 'Wagner', 'Munich']",48.1371079,11.5753822]
+       "proprietes" : ["Paul Klee",47.0213315,7.4519196]
     },
     {
-       "proprietes" : ["['Naissance', 'Paul Klee']",47.0213315,7.4519196]
+       "proprietes" : ["Joseph Staline",47.4800227,-0.7220535]
     },
     {
-       "proprietes" : ["['Joseph Staline']",47.4800227,-0.7220535]
-    },
-    {
-       "proprietes" : ["['Presentation', 'Thomas Edison', 'Menlo Park']",37.4538274,-122.1821871]
+       "proprietes" : ["Thomas Edison, Menlo Park",37.4538274,-122.1821871]
     }
 ]

@@ -1,23 +1,17 @@
 [
     {
-       "proprietes" : ["['Lenine', 'Revolution', 'Benito Mussolini']",44.40726,8.9338624]
+       "proprietes" : ["Benito Mussolini",44.40726,8.9338624]
     },
     {
-       "proprietes" : ["['Denonciation', 'Lenine', 'Revolution']",44.40726,8.9338624]
+       "proprietes" : ["Walter Mittelholzer",46.4194491,4.6281959]
     },
     {
-       "proprietes" : ["['Walter Mittelholzer']",46.4194491,4.6281959]
+       "proprietes" : ["Walter Mittelholzer, Milan",46.424449100000004,4.6331959]
     },
     {
-       "proprietes" : ["['Walter Mittelholzer', 'Milan', 'Suisse']",46.4194491,4.6281959]
+       "proprietes" : ["Benito Mussolini",41.8933203,12.4829321]
     },
     {
-       "proprietes" : ["['Revolution', 'Fascistes', 'Benito Mussolini']",41.8933203,12.4829321]
-    },
-    {
-       "proprietes" : ["['Revolution', 'Fascistes']",41.8933203,12.4829321]
-    },
-    {
-       "proprietes" : ["['Adolf Hitler', 'Election', 'Von Knilling']",48.1371079,11.5753822]
+       "proprietes" : ["Adolf Hitler, Von Knilling",48.1371079,11.5753822]
     }
 ]

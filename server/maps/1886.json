@@ -1,8 +1,5 @@
 [
     {
-       "proprietes" : ["['Ouverture', 'Paris']",48.2083537,16.3725042]
-    },
-    {
-       "proprietes" : ["['Louise Michel', 'Litterature', 'Decadente']",48.8566101,2.3514992]
+       "proprietes" : ["Louise Michel",48.8566101,2.3514992]
     }
 ]

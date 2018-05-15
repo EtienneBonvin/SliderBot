@@ -1,17 +1,17 @@
 [
     {
-       "proprietes" : ["['Enzo Ferrari', 'Ferrari F1-86']",44.5255217,10.8663607]
+       "proprietes" : ["Enzo Ferrari, Ferrari F1-86",44.5255217,10.8663607]
     },
     {
-       "proprietes" : ["['Distinction', 'Phil Collins']",46.4310831,6.9129921]
+       "proprietes" : ["Phil Collins",46.4310831,6.9129921]
     },
     {
-       "proprietes" : ["['Distinction', 'Phil Collins']",46.4310831,6.9129921]
+       "proprietes" : ["Phil Collins",46.436083100000005,6.9179921]
     },
     {
-       "proprietes" : ["['Concert', 'Eric Clapton', 'Phil Collins']",46.4310831,6.9129921]
+       "proprietes" : ["Eric Clapton, Phil Collins",46.44108310000001,6.9229921]
     },
     {
-       "proprietes" : ["['Concert', 'Eric Clapton', 'Montreux', 'Phil Collins']",46.4310831,6.9129921]
+       "proprietes" : ["Eric Clapton, Phil Collins",46.44608310000001,6.9279921]
     }
 ]

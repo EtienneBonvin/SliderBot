@@ -1,8 +1,8 @@
 [
     {
-       "proprietes" : ["['Signature', 'Magic Johnson', 'Los Angeles Lakers']",34.054935,-118.244476]
+       "proprietes" : ["Magic Johnson, Los Angeles Lakers",34.054935,-118.244476]
     },
     {
-       "proprietes" : ["['Naissance', 'Roger Federer']",47.5581077,7.5878261]
+       "proprietes" : ["Roger Federer",47.5581077,7.5878261]
     }
 ]

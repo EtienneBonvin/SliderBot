@@ -1,11 +1,11 @@
 [
     {
-       "proprietes" : ["['Donald Trump']",32.7762719,-96.7968559]
+       "proprietes" : ["Donald Trump",32.7762719,-96.7968559]
     },
     {
-       "proprietes" : ["['Distinction', 'Steffi Graf', 'Boris Becker']",51.5073219,-0.1276474]
+       "proprietes" : ["Steffi Graf, Boris Becker",51.5073219,-0.1276474]
     },
     {
-       "proprietes" : ["['Distinction', 'Steffi Graf']",51.5073219,-0.1276474]
+       "proprietes" : ["Steffi Graf",51.5123219,-0.12264739999999999]
     }
 ]

@@ -1,17 +1,17 @@
 [
     {
-       "proprietes" : ["['Naissance', 'Daniel Brelaz']",46.5218269,6.6327025]
+       "proprietes" : ["Daniel Brelaz",46.5218269,6.6327025]
     },
     {
-       "proprietes" : ["['Daniel Brelaz']",46.5218269,6.6327025]
+       "proprietes" : ["Daniel Brelaz",46.5268269,6.6377025]
     },
     {
-       "proprietes" : ["['Daniel Brelaz', 'Lausanne']",46.5218269,6.6327025]
+       "proprietes" : ["Daniel Brelaz",46.531826900000006,6.6427024999999995]
     },
     {
-       "proprietes" : ["['Publication', 'Andre Breton', 'Marc Eigeldingen']",48.8566101,2.3514992]
+       "proprietes" : ["Andre Breton, Marc Eigeldingen",48.8566101,2.3514992]
     },
     {
-       "proprietes" : ["['Naissance', 'Princesse Anne']",51.5073219,-0.1276474]
+       "proprietes" : ["Princesse Anne",51.5073219,-0.1276474]
     }
 ]

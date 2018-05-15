@@ -1,14 +1,14 @@
 [
     {
-       "proprietes" : ["['Record', 'Auguste Piccard']",48.9467562,11.4038717]
+       "proprietes" : ["Auguste Piccard",48.9467562,11.4038717]
     },
     {
-       "proprietes" : ["['Thomas Edison']",40.7987113,-74.2390353]
+       "proprietes" : ["Thomas Edison",40.7987113,-74.2390353]
     },
     {
-       "proprietes" : ["['Deces', 'Thomas Edison']",40.7987113,-74.2390353]
+       "proprietes" : ["Thomas Edison",40.8037113,-74.2340353]
     },
     {
-       "proprietes" : ["['Obseques', 'Thomas Edison']",40.735657,-74.1723667]
+       "proprietes" : ["Thomas Edison",40.735657,-74.1723667]
     }
 ]

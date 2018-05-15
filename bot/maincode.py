@@ -1,4 +1,5 @@
 from urllib.request import urlopen
+from urllib.error import HTTPError
 from bs4 import BeautifulSoup
 import sys
 import io
@@ -6,6 +7,7 @@ import json
 import time
 from countries import countries
 from geopy import *
+from geopy.exc import GeocoderTimedOut
 from geopy.geocoders import *
 from html.parser import HTMLParser
 import unicodedata
@@ -23,9 +25,13 @@ def masterFunction(year):
     for any year (argument)
     """
     #==========Initialisation===========
-
+    
+    # Creates errors
     #sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-    response=urlopen("http://wikipast.epfl.ch/wikipast/index.php/"+str(year))
+    try:
+        response=urlopen("http://wikipast.epfl.ch/wikipast/index.php/"+str(year))
+    except HTTPError:
+        return
     page_source=response.read()
     soup=BeautifulSoup(page_source,'html.parser')
     stringSoup = str(soup)
@@ -118,9 +124,22 @@ def masterFunction(year):
         """
         output = []
         for tuple in tuples:
-            coord = geolocator.geocode(capitalIfCountry(tuple[1]))
-            output.append([tuple[2], coord.latitude, coord.longitude])
-        return output
+            strNames = (tuple[2][0])
+            try:
+                coord = geolocator.geocode(capitalIfCountry(tuple[1]))
+            except GeocoderTimedOut:
+                print("Geocode timed out, retry")
+                finalNameCoordTuple(tuples)
+                return
+            if coord is None:
+                return
+            if(len(tuple[2])==1):
+                output.append([strNames, coord.latitude, coord.longitude])
+            else:
+                for j in range (1,len(tuple[2])):
+                    strNames+=', ' +(tuple[2][j])
+                output.append([strNames, coord.latitude, coord.longitude])
+        return repulsePoints(output)
 
     #=============Print=============
 
@@ -147,6 +166,8 @@ def masterFunction(year):
     #===========JSON file===========
 
     def createJson(inputData, year):
+        if inputData is None:
+            return
         """
         Takes array [Name, lat, long] for each year
         Outputs in .json such that it can be plotted
@@ -154,7 +175,7 @@ def masterFunction(year):
         indent = '    '
         indent2 = '      '
         maxLimit = len(inputData)
-        with open(str(year)+'.json', 'w') as outfile:
+        with open("../server/maps/"+str(year)+'.json', 'w') as outfile:
             outfile.write('['+'\n')
             for i in range (maxLimit):
                 if i == (maxLimit-1):
@@ -185,4 +206,11 @@ def masterFunction(year):
 
     createJson(finalNameCoordTuple(createCoreList()),year)
 
-masterFunction(1964)
+from datetime import datetime
+before = datetime.now()
+for year in range(1765, 2000):
+    print("Fetching year "+str(year))
+    masterFunction(year)
+time = datetime.now() - before
+print("Time spend : "+str(time))
+print("Average time per year : "+str(time / (1999 - 1765)))

@@ -1,20 +1,14 @@
 [
     {
-       "proprietes" : ["['Inauguration', 'Albert Einstein']",47.3723957,8.5423216]
+       "proprietes" : ["Albert Einstein",47.3723957,8.5423216]
     },
     {
-       "proprietes" : ["['Attentat']",56.7861112,-4.1140518]
+       "proprietes" : ["Rene Coty",48.8566101,2.3514992]
     },
     {
-       "proprietes" : ["['Rene Coty']",48.8566101,2.3514992]
+       "proprietes" : ["Michael Jackson",41.6021292,-87.3371372]
     },
     {
-       "proprietes" : ["['Naissance', 'Michael Jackson']",41.6021292,-87.3371372]
-    },
-    {
-       "proprietes" : ["['Deces', 'Wolfgang Pauli']",47.3723957,8.5423216]
-    },
-    {
-       "proprietes" : ["['Election', 'France']",48.8566101,2.3514992]
+       "proprietes" : ["Wolfgang Pauli",47.3773957,8.5473216]
     }
 ]

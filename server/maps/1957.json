@@ -1,20 +1,17 @@
 [
     {
-       "proprietes" : ["['Demission', 'Anthony Eden', 'Ministre', 'Harold Macmillan']",51.5073219,-0.1276474]
+       "proprietes" : ["Anthony Eden, Harold Macmillan",51.5073219,-0.1276474]
     },
     {
-       "proprietes" : ["['Exposition', 'Le Corbusier', 'Zurich', 'Alfred Roth']",47.3723957,8.5423216]
+       "proprietes" : ["Le Corbusier, Alfred Roth",47.3723957,8.5423216]
     },
     {
-       "proprietes" : ["['Exposition', 'Zurich', 'Alfred Roth']",47.3723957,8.5423216]
+       "proprietes" : ["Alfred Roth",47.3773957,8.5473216]
     },
     {
-       "proprietes" : ["['Rencontre', 'John Lennon', 'John Lennon', 'The Quarrymen']",53.4953602,-2.97393796008601]
+       "proprietes" : ["John Lennon, John Lennon",53.4953602,-2.97393796008601]
     },
     {
-       "proprietes" : ["['Distinction']",47.103287,6.8324545]
-    },
-    {
-       "proprietes" : ["['Distinction', 'Le Corbusier']",47.103287,6.8324545]
+       "proprietes" : ["Le Corbusier",47.103287,6.8324545]
     }
 ]

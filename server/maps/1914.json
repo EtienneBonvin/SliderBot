@@ -1,11 +1,8 @@
 [
     {
-       "proprietes" : ["['Benito Mussolini', 'Neutralite']",45.4667971,9.1904984]
+       "proprietes" : ["Benito Mussolini",45.4667971,9.1904984]
     },
     {
-       "proprietes" : ["['Annonce', 'Neutralite']",45.4667971,9.1904984]
-    },
-    {
-       "proprietes" : ["['Destruction', 'Usine', 'Compagnie Edison']",40.7987113,-74.2390353]
+       "proprietes" : ["Compagnie Edison",40.7987113,-74.2390353]
     }
 ]
