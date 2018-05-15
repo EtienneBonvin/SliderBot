@@ -24,7 +24,7 @@ def masterFunction(year):
     """
     #==========Initialisation===========
 
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    #sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
     response=urlopen("http://wikipast.epfl.ch/wikipast/index.php/"+str(year))
     page_source=response.read()
     soup=BeautifulSoup(page_source,'html.parser')
@@ -41,7 +41,7 @@ def masterFunction(year):
             for chunk in ne_chunk(pos_tag(word_tokenize(remove_accents(string)))):
                 if hasattr(chunk, 'label'):
                     if chunk.label() == 'PERSON':
-                        print(' '.join(c[0] for c in chunk))
+                        #print(' '.join(c[0] for c in chunk))
                         return True
 
         return False
@@ -185,4 +185,4 @@ def masterFunction(year):
 
     createJson(finalNameCoordTuple(createCoreList()),year)
 
-masterFunction(1943)
+masterFunction(1964)
