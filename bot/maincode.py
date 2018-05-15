@@ -12,8 +12,7 @@ from geopy.geocoders import *
 from html.parser import HTMLParser
 import unicodedata
 from nltk import ne_chunk, pos_tag, word_tokenize
-from functools import reduce
-
+from nltk.tree import Tree
 #from calais.base.client import Calais
 
 # oldest year found : 1765
@@ -25,7 +24,7 @@ def masterFunction(year):
     for any year (argument)
     """
     #==========Initialisation===========
-    
+
     # Creates errors
     #sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
     try:
@@ -51,6 +50,7 @@ def masterFunction(year):
                         return True
 
         return False
+
 
     def remove_accents(input_str):
         nfkd_form = unicodedata.normalize('NFKD', input_str)
@@ -102,6 +102,7 @@ def masterFunction(year):
             parser = MyHTMLParser()
             parser.feed(skipCity)
             if len(parser.data) != 0:
+                #print(year, city, parser.data)
                 return (year, city, parser.data)
 
 
@@ -116,6 +117,14 @@ def masterFunction(year):
             return (dataPays['capital'])
         else:
             return location
+
+    def repulsePoints(tuples):
+        for i in range (len(tuples)):
+            for j in range (len(tuples)):
+                if (i != j and tuples[i][1] == tuples[j][1] and tuples[i][2] == tuples[j][2]):
+                    tuples[j][1] = tuples[i][1] + 0.005
+                    tuples[j][2] = tuples[i][2] + 0.005
+        return tuples
 
     def finalNameCoordTuple(tuples):
         """
@@ -203,7 +212,8 @@ def masterFunction(year):
 
         return yearCityNameList
 
-
+    #print(createCoreList())
+    #print(finalNameCoordTuple(createCoreList()))
     createJson(finalNameCoordTuple(createCoreList()),year)
 
 from datetime import datetime
