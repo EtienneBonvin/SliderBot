@@ -119,8 +119,14 @@
 //        {
 //          point.setIcon(proprietes[3]);
 //        }
+        if(proprietes["proprietes"][3]){
+          var description='<a href="'+proprietes["proprietes"][3]+'">'+proprietes["proprietes"][0]+'</a>';
+        }
+        else {
+          var description=proprietes["proprietes"][0];
+        }
         var fenetreInfo=new google.maps.InfoWindow({
-          content:proprietes["proprietes"][0]
+          content:description
         });
         point.addListener('click', function(){
           fenetreInfo.open(carte,point);
@@ -137,23 +143,29 @@
       update();
     }
     augmenter=function(){
-      slider.stepUp(1);
-      output.innerHTML = slider.value;
-      update();
+      if(slider.value!=slider.max)
+      {
+        slider.stepUp(1);
+        output.innerHTML = slider.value;
+        update();
+      }
     }
     diminuer=function(){
-      slider.stepDown(1);
-      output.innerHTML = slider.value;
-      update();
+      if(slider.value!=slider.min)
+      {
+        slider.stepDown(1);
+        output.innerHTML = slider.value;
+        update();
+      }
     }
     autoplay=function(){
-      if(b_autoplay.firstChild.data == "Autoplay") 
+      if(b_autoplay.firstChild.data == "Autoplay")
       {
 		  b_autoplay.firstChild.data = "Pause";
 		  augmenter();
 		  intervalle=setInterval(augmenter, 1500);
 	  }
-	  else 
+	  else
 	  {
 		  b_autoplay.firstChild.data = "Autoplay";
 		  clearInterval(intervalle);
