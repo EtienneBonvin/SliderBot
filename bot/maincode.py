@@ -17,7 +17,8 @@ from nltk.tree import Tree
 
 # oldest year found : 1765
 # isnumeric() pour détecter si la date est bien récupéree
-
+oldestYearWiki = 1765
+latestYearWiki = 1999
 def masterFunction(year):
     """
     Core function : creates a JSON file with [Name, lat, long]
@@ -126,6 +127,16 @@ def masterFunction(year):
                     tuples[j][2] = tuples[i][2] + 0.005
         return tuples
 
+    def addWikiLink(input_string):
+        output_string = input_string
+        for i in range (len(input_string)):
+            #input_string[i][0] = remove_accents(input_string[i][0])
+            try:
+                output_string[i].append('http://wikipast.epfl.ch/wikipast/index.php/'+input_string[i][0].split(', ')[0].replace(" ", "_"))
+            except:
+                return
+        return output_string
+
     def finalNameCoordTuple(tuples):
         """
         Produces an array 'output' containing [Name, latitude, longitude]
@@ -148,7 +159,7 @@ def masterFunction(year):
                 for j in range (1,len(tuple[2])):
                     strNames+=', ' +(tuple[2][j])
                 output.append([strNames, coord.latitude, coord.longitude])
-        return repulsePoints(output)
+        return repulsePoints(addWikiLink(output))
 
     #=============Print=============
 
@@ -187,15 +198,35 @@ def masterFunction(year):
         with open("../server/maps/"+str(year)+'.json', 'w') as outfile:
             outfile.write('['+'\n')
             for i in range (maxLimit):
-                if i == (maxLimit-1):
+                try:
+                    if i == (maxLimit-1):
+                            outfile.write(indent + '{'+'\n')
+                            outfile.write(indent2 + ' "proprietes" : '+'['+'"'+remove_accents(str(inputData[i][0]))+'"'+ ','+ str(inputData[i][1])+ ','+ str(inputData[i][2])+ ','+'"'+ str(inputData[i][3])+'"'+']'+'\n')
+                            outfile.write(indent + '}'+'\n')
+                    else:
                         outfile.write(indent + '{'+'\n')
+                        outfile.write(indent2 + ' "proprietes" : '+'['+'"'+remove_accents(str(inputData[i][0]))+'"'+ ','+ str(inputData[i][1])+ ','+ str(inputData[i][2])+ ','+'"'+ str(inputData[i][3])+'"'+']'+'\n')
+                        outfile.write(indent + '}'+','+'\n')
+                # except UnicodeEncodeError:
+                #     inputData[i][0] = inputData[i][0].replace('«', '').strip()
+                #     inputData[i][0] = inputData[i][0].replace('»', '').strip()
+                #     inputData[i][3] = inputData[i][3].replace('«', '').strip()
+                #     inputData[i][3] = inputData[i][3].replace('»', '').strip()
+                #     if i == (maxLimit-1):
+                #             outfile.write(indent2 + ' "proprietes" : '+'['+'"'+remove_accents(str(inputData[i][0]))+'"'+ ','+ str(inputData[i][1])+ ','+ str(inputData[i][2])+ ','+'"'+ str(inputData[i][3])+'"'+']'+'\n')
+                #             outfile.write(indent + '}'+'\n')
+                #     else:
+                #         outfile.write(indent2 + ' "proprietes" : '+'['+'"'+remove_accents(str(inputData[i][0]))+'"'+ ','+ str(inputData[i][1])+ ','+ str(inputData[i][2])+ ','+'"'+ str(inputData[i][3])+'"'+']'+'\n')
+                #         outfile.write(indent + '}'+','+'\n')
+                except:
+                    inputData[i][0] = inputData[i][0].replace('«', '').strip()
+                    inputData[i][0] = inputData[i][0].replace('»', '').strip()
+                    if i == (maxLimit-1):
+                            outfile.write(indent2 + ' "proprietes" : '+'['+'"'+remove_accents(str(inputData[i][0]))+'"'+ ','+ str(inputData[i][1])+ ','+ str(inputData[i][2])+']'+'\n')
+                            outfile.write(indent + '}'+'\n')
+                    else:
                         outfile.write(indent2 + ' "proprietes" : '+'['+'"'+remove_accents(str(inputData[i][0]))+'"'+ ','+ str(inputData[i][1])+ ','+ str(inputData[i][2])+']'+'\n')
-                        outfile.write(indent + '}'+'\n')
-                else:
-                    outfile.write(indent + '{'+'\n')
-                    outfile.write(indent2 + ' "proprietes" : '+'['+'"'+remove_accents(str(inputData[i][0]))+'"'+ ','+ str(inputData[i][1])+ ','+ str(inputData[i][2])+']'+'\n')
-                    outfile.write(indent + '}'+','+'\n')
-
+                        outfile.write(indent + '}'+','+'\n')
             outfile.write(']')
         outfile.close()
 
@@ -216,11 +247,12 @@ def masterFunction(year):
     #print(finalNameCoordTuple(createCoreList()))
     createJson(finalNameCoordTuple(createCoreList()),year)
 
+#masterFunction(1969)
 from datetime import datetime
 before = datetime.now()
-for year in range(1765, 2000):
+for year in range(oldestYearWiki, latestYearWiki+1):
     print("Fetching year "+str(year))
     masterFunction(year)
 time = datetime.now() - before
-print("Time spend : "+str(time))
-print("Average time per year : "+str(time / (1999 - 1765)))
+print("Time spent: "+str(time))
+print("Average time per year : "+str(time / (latestYearWiki - oldestYearWiki)))
