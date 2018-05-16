@@ -1,26 +1,26 @@
 [
     {
-       "proprietes" : ["Paul Klee",47.4250593,9.3765878]
+       "proprietes" : ["Paul Klee",47.4250593,9.3765878,"http://wikipast.epfl.ch/wikipast/index.php/Paul_Klee"]
     },
     {
-       "proprietes" : ["Winston Churchill",51.5073219,-0.1276474]
+       "proprietes" : ["Winston Churchill",51.5073219,-0.1276474,"http://wikipast.epfl.ch/wikipast/index.php/Winston_Churchill"]
     },
     {
-       "proprietes" : ["Anthony Eden, Elisabeth II",51.5123219,-0.12264739999999999]
+       "proprietes" : ["Anthony Eden, Elisabeth II",51.5123219,-0.12264739999999999,"http://wikipast.epfl.ch/wikipast/index.php/Anthony_Eden"]
     },
     {
-       "proprietes" : ["Albert Einstein",40.3492744,-74.6592958]
+       "proprietes" : ["Albert Einstein",40.3492744,-74.6592958,"http://wikipast.epfl.ch/wikipast/index.php/Albert_Einstein"]
     },
     {
-       "proprietes" : ["Bill Gates",47.6038321,-122.3300624]
+       "proprietes" : ["Bill Gates",47.6038321,-122.3300624,"http://wikipast.epfl.ch/wikipast/index.php/Bill_Gates"]
     },
     {
-       "proprietes" : ["Bill Gates",47.6088321,-122.32506240000001]
+       "proprietes" : ["Bill Gates",47.6088321,-122.32506240000001,"http://wikipast.epfl.ch/wikipast/index.php/Bill_Gates"]
     },
     {
-       "proprietes" : ["Arthur Honegger",48.8566101,2.3514992]
+       "proprietes" : ["Arthur Honegger",48.8566101,2.3514992,"http://wikipast.epfl.ch/wikipast/index.php/Arthur_Honegger"]
     },
     {
-       "proprietes" : ["Arthur Honegger",48.8616101,2.3564992]
+       "proprietes" : ["Arthur Honegger",48.8616101,2.3564992,"http://wikipast.epfl.ch/wikipast/index.php/Arthur_Honegger"]
     }
 ]

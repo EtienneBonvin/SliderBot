@@ -1,17 +1,17 @@
 [
     {
-       "proprietes" : ["John Lennon",51.5073219,-0.1276474]
+       "proprietes" : ["John Lennon",51.5073219,-0.1276474,"http://wikipast.epfl.ch/wikipast/index.php/John_Lennon"]
     },
     {
-       "proprietes" : ["Scotland Yard, John Lennon",51.5123219,-0.12264739999999999]
+       "proprietes" : ["Scotland Yard, John Lennon",51.5123219,-0.12264739999999999,"http://wikipast.epfl.ch/wikipast/index.php/Scotland_Yard"]
     },
     {
        "proprietes" : ["Elisabeth II",-23.1571641,-134.9540922]
     },
     {
-       "proprietes" : ["Edward Heath, Elisabeth II",51.517321900000006,-0.11764739999999999]
+       "proprietes" : ["Edward Heath, Elisabeth II",51.517321900000006,-0.11764739999999999,"http://wikipast.epfl.ch/wikipast/index.php/Edward_Heath"]
     },
     {
-       "proprietes" : ["Charles Manson, Sharon Tate",34.054935,-118.244476]
+       "proprietes" : ["Charles Manson, Sharon Tate",34.054935,-118.244476,"http://wikipast.epfl.ch/wikipast/index.php/Charles_Manson"]
     }
 ]

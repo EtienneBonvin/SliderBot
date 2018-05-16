@@ -1,14 +1,14 @@
 [
     {
-       "proprietes" : ["Robert Oppenheimer",40.3492744,-74.6592958]
+       "proprietes" : ["Robert Oppenheimer",40.3492744,-74.6592958,"http://wikipast.epfl.ch/wikipast/index.php/Robert_Oppenheimer"]
     },
     {
-       "proprietes" : ["Enzo Ferrari",44.5255217,10.8663607]
+       "proprietes" : ["Enzo Ferrari",44.5255217,10.8663607,"http://wikipast.epfl.ch/wikipast/index.php/Enzo_Ferrari"]
     },
     {
-       "proprietes" : ["Enzo Ferrari, Lorenzo Bandini",44.5305217,10.8713607]
+       "proprietes" : ["Enzo Ferrari, Lorenzo Bandini",44.5305217,10.8713607,"http://wikipast.epfl.ch/wikipast/index.php/Enzo_Ferrari"]
     },
     {
-       "proprietes" : ["Ernesto Rafael Guevara",-17.0568696,-64.9912286]
+       "proprietes" : ["Ernesto Rafael Guevara",-17.0568696,-64.9912286,"http://wikipast.epfl.ch/wikipast/index.php/Ernesto_Rafael_Guevara"]
     }
 ]

@@ -1,11 +1,11 @@
 [
     {
-       "proprietes" : ["Winston Churchill",51.5073219,-0.1276474]
+       "proprietes" : ["Winston Churchill",51.5073219,-0.1276474,"http://wikipast.epfl.ch/wikipast/index.php/Winston_Churchill"]
     },
     {
-       "proprietes" : ["Walter Mittelholzer",47.4394153,8.5672938]
+       "proprietes" : ["Walter Mittelholzer",47.4394153,8.5672938,"http://wikipast.epfl.ch/wikipast/index.php/Walter_Mittelholzer"]
     },
     {
-       "proprietes" : ["Walter Mittelholzer, Walter Mittelholzer",47.4444153,8.5722938]
+       "proprietes" : ["Walter Mittelholzer, Walter Mittelholzer",47.4444153,8.5722938,"http://wikipast.epfl.ch/wikipast/index.php/Walter_Mittelholzer"]
     }
 ]

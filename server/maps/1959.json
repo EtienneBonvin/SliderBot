@@ -1,23 +1,23 @@
 [
     {
-       "proprietes" : ["Dr Honoris Causa, Auguste Piccard",46.5218269,6.6327025]
+       "proprietes" : ["Dr Honoris Causa, Auguste Piccard",46.5218269,6.6327025,"http://wikipast.epfl.ch/wikipast/index.php/Dr_Honoris_Causa"]
     },
     {
-       "proprietes" : ["Serge Gainsbourg, La Comedie",44.6372315,-1.2533061]
+       "proprietes" : ["Serge Gainsbourg, La Comedie",44.6372315,-1.2533061,"http://wikipast.epfl.ch/wikipast/index.php/Serge_Gainsbourg"]
     },
     {
-       "proprietes" : ["Rudolf Diesel, Auguste Piccard",40.9395304,-76.1716009]
+       "proprietes" : ["Rudolf Diesel, Auguste Piccard",40.9395304,-76.1716009,"http://wikipast.epfl.ch/wikipast/index.php/Rudolf_Diesel"]
     },
     {
-       "proprietes" : ["Magic Johnson",42.7337712,-84.5553805]
+       "proprietes" : ["Magic Johnson",42.7337712,-84.5553805,"http://wikipast.epfl.ch/wikipast/index.php/Magic_Johnson"]
     },
     {
-       "proprietes" : ["Enzo Ferrari",44.5255217,10.8663607]
+       "proprietes" : ["Enzo Ferrari",44.5255217,10.8663607,"http://wikipast.epfl.ch/wikipast/index.php/Enzo_Ferrari"]
     },
     {
-       "proprietes" : ["Auguste Piccard",32.7174209,-117.1627714]
+       "proprietes" : ["Auguste Piccard",32.7174209,-117.1627714,"http://wikipast.epfl.ch/wikipast/index.php/Auguste_Piccard"]
     },
     {
-       "proprietes" : ["Enzo Ferrari",44.5305217,10.8713607]
+       "proprietes" : ["Enzo Ferrari",44.5305217,10.8713607,"http://wikipast.epfl.ch/wikipast/index.php/Enzo_Ferrari"]
     }
 ]

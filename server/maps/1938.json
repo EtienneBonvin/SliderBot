@@ -1,8 +1,8 @@
 [
     {
-       "proprietes" : ["Berlin, Adolf Hitler",52.5170365,13.3888599]
+       "proprietes" : ["Berlin, Adolf Hitler",52.5170365,13.3888599,"http://wikipast.epfl.ch/wikipast/index.php/Berlin"]
     },
     {
-       "proprietes" : ["Sigmund Freud",48.2083537,16.3725042]
+       "proprietes" : ["Sigmund Freud",48.2083537,16.3725042,"http://wikipast.epfl.ch/wikipast/index.php/Sigmund_Freud"]
     }
 ]

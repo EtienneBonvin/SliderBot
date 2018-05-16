@@ -1,11 +1,11 @@
 [
     {
-       "proprietes" : ["Prince Edward, Elisabeth II",51.5073219,-0.1276474]
+       "proprietes" : ["Prince Edward, Elisabeth II",51.5073219,-0.1276474,"http://wikipast.epfl.ch/wikipast/index.php/Prince_Edward"]
     },
     {
-       "proprietes" : ["Alec Douglas-Home, Elisabeth II",51.5123219,-0.12264739999999999]
+       "proprietes" : ["Alec Douglas-Home, Elisabeth II",51.5123219,-0.12264739999999999,"http://wikipast.epfl.ch/wikipast/index.php/Alec_Douglas-Home"]
     },
     {
-       "proprietes" : ["Manuel Bouvier, Nicolas Bouvier",34.6968642,139.4049033]
+       "proprietes" : ["Manuel Bouvier, Nicolas Bouvier",34.6968642,139.4049033,"http://wikipast.epfl.ch/wikipast/index.php/Manuel_Bouvier"]
     }
 ]

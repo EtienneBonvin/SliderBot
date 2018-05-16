@@ -1,17 +1,17 @@
 [
     {
-       "proprietes" : ["Palais Strozzi",43.7698712,11.2555757]
+       "proprietes" : ["Palais Strozzi",43.7698712,11.2555757,"http://wikipast.epfl.ch/wikipast/index.php/Palais_Strozzi"]
     },
     {
-       "proprietes" : ["Le Corbusier, Palais Strozzi",43.7748712,11.2605757]
+       "proprietes" : ["Le Corbusier, Palais Strozzi",43.7748712,11.2605757,"http://wikipast.epfl.ch/wikipast/index.php/Le_Corbusier"]
     },
     {
-       "proprietes" : ["Nicolas Bouvier",46.2017559,6.1466014]
+       "proprietes" : ["Nicolas Bouvier",46.2017559,6.1466014,"http://wikipast.epfl.ch/wikipast/index.php/Nicolas_Bouvier"]
     },
     {
-       "proprietes" : ["Henry Dunant",46.206755900000005,6.1516014]
+       "proprietes" : ["Henry Dunant",46.206755900000005,6.1516014,"http://wikipast.epfl.ch/wikipast/index.php/Henry_Dunant"]
     },
     {
-       "proprietes" : ["Le Corbusier",48.8566101,2.3514992]
+       "proprietes" : ["Le Corbusier",48.8566101,2.3514992,"http://wikipast.epfl.ch/wikipast/index.php/Le_Corbusier"]
     }
 ]

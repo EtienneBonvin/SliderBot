@@ -1,17 +1,17 @@
 [
     {
-       "proprietes" : ["Bobby Fischer",41.8755546,-87.6244212]
+       "proprietes" : ["Bobby Fischer",41.8755546,-87.6244212,"http://wikipast.epfl.ch/wikipast/index.php/Bobby_Fischer"]
     },
     {
-       "proprietes" : ["Benito Mussolini",41.8933203,12.4829321]
+       "proprietes" : ["Benito Mussolini",41.8933203,12.4829321,"http://wikipast.epfl.ch/wikipast/index.php/Benito_Mussolini"]
     },
     {
-       "proprietes" : ["Adolf Hitler, Berlin",52.5170365,13.3888599]
+       "proprietes" : ["Adolf Hitler, Berlin",52.5170365,13.3888599,"http://wikipast.epfl.ch/wikipast/index.php/Adolf_Hitler"]
     },
     {
-       "proprietes" : ["Franklin D. Roosevelt",44.370353,6.0608068]
+       "proprietes" : ["Franklin D. Roosevelt",44.370353,6.0608068,"http://wikipast.epfl.ch/wikipast/index.php/Franklin_D._Roosevelt"]
     },
     {
-       "proprietes" : ["Franklin D. Roosevelt, Joseph Staline",35.7006177,51.401375]
+       "proprietes" : ["Franklin D. Roosevelt, Joseph Staline",35.7006177,51.401375,"http://wikipast.epfl.ch/wikipast/index.php/Franklin_D._Roosevelt"]
     }
 ]

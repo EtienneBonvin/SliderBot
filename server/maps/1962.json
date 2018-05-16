@@ -1,14 +1,14 @@
 [
     {
-       "proprietes" : ["Thomas Bouvier, Nicolas Bouvier",46.2017559,6.1466014]
+       "proprietes" : ["Thomas Bouvier, Nicolas Bouvier",46.2017559,6.1466014,"http://wikipast.epfl.ch/wikipast/index.php/Thomas_Bouvier"]
     },
     {
-       "proprietes" : ["Auguste Piccard",46.5218269,6.6327025]
+       "proprietes" : ["Auguste Piccard",46.5218269,6.6327025,"http://wikipast.epfl.ch/wikipast/index.php/Auguste_Piccard"]
     },
     {
-       "proprietes" : ["Auguste Piccard",46.5268269,6.6377025]
+       "proprietes" : ["Auguste Piccard",46.5268269,6.6377025,"http://wikipast.epfl.ch/wikipast/index.php/Auguste_Piccard"]
     },
     {
-       "proprietes" : ["Arthur Honegger, Arthur Honegger",36.1767521,5.6780416]
+       "proprietes" : ["Arthur Honegger, Arthur Honegger",36.1767521,5.6780416,"http://wikipast.epfl.ch/wikipast/index.php/Arthur_Honegger"]
     }
 ]

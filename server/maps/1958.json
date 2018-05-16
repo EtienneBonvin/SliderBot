@@ -1,6 +1,6 @@
 [
     {
-       "proprietes" : ["Albert Einstein",47.3723957,8.5423216]
+       "proprietes" : ["Albert Einstein",47.3723957,8.5423216,"http://wikipast.epfl.ch/wikipast/index.php/Albert_Einstein"]
     },
     {
        "proprietes" : ["Elisabeth II",56.7861112,-4.1140518]
@@ -9,9 +9,9 @@
        "proprietes" : ["Rene Coty",48.8566101,2.3514992]
     },
     {
-       "proprietes" : ["Michael Jackson",41.6021292,-87.3371372]
+       "proprietes" : ["Michael Jackson",41.6021292,-87.3371372,"http://wikipast.epfl.ch/wikipast/index.php/Michael_Jackson"]
     },
     {
-       "proprietes" : ["Wolfgang Pauli",47.3773957,8.5473216]
+       "proprietes" : ["Wolfgang Pauli",47.3773957,8.5473216,"http://wikipast.epfl.ch/wikipast/index.php/Wolfgang_Pauli"]
     }
 ]

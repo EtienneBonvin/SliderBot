@@ -1,11 +1,11 @@
 [
     {
-       "proprietes" : ["Jeanne Hersch",46.2017559,6.1466014]
+       "proprietes" : ["Jeanne Hersch",46.2017559,6.1466014,"http://wikipast.epfl.ch/wikipast/index.php/Jeanne_Hersch"]
     },
     {
-       "proprietes" : ["Henri Dunant",47.4421715,9.532089]
+       "proprietes" : ["Henri Dunant",47.4421715,9.532089,"http://wikipast.epfl.ch/wikipast/index.php/Henri_Dunant"]
     },
     {
-       "proprietes" : ["Henry Dunant",47.4471715,9.537089]
+       "proprietes" : ["Henry Dunant",47.4471715,9.537089,"http://wikipast.epfl.ch/wikipast/index.php/Henry_Dunant"]
     }
 ]

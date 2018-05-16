@@ -1,14 +1,14 @@
 [
     {
-       "proprietes" : ["Tout Herge, Herge",46.7020556,1.5840264]
+       "proprietes" : ["Tout Herge, Herge",46.7020556,1.5840264,"http://wikipast.epfl.ch/wikipast/index.php/Tout_Herge"]
     },
     {
-       "proprietes" : ["Magic Johnson",33.96185,-118.3550377]
+       "proprietes" : ["Magic Johnson",33.96185,-118.3550377,"http://wikipast.epfl.ch/wikipast/index.php/Magic_Johnson"]
     },
     {
-       "proprietes" : ["Magic Johnson",34.6968642,139.4049033]
+       "proprietes" : ["Magic Johnson",34.6968642,139.4049033,"http://wikipast.epfl.ch/wikipast/index.php/Magic_Johnson"]
     },
     {
-       "proprietes" : ["Magic Johnson",34.7018642,139.4099033]
+       "proprietes" : ["Magic Johnson",34.7018642,139.4099033,"http://wikipast.epfl.ch/wikipast/index.php/Magic_Johnson"]
     }
 ]

@@ -1,17 +1,17 @@
 [
     {
-       "proprietes" : ["Jeanne Hersch",10.0,102.0]
+       "proprietes" : ["Jeanne Hersch",10.0,102.0,"http://wikipast.epfl.ch/wikipast/index.php/Jeanne_Hersch"]
     },
     {
-       "proprietes" : ["Sepp Blatter",46.2913113,7.8811918]
+       "proprietes" : ["Sepp Blatter",46.2913113,7.8811918,"http://wikipast.epfl.ch/wikipast/index.php/Sepp_Blatter"]
     },
     {
-       "proprietes" : ["Franklin D. Roosevelt",42.3788774,-72.032366]
+       "proprietes" : ["Franklin D. Roosevelt",42.3788774,-72.032366,"http://wikipast.epfl.ch/wikipast/index.php/Franklin_D._Roosevelt"]
     },
     {
-       "proprietes" : ["Franklin D. Roosevelt",3.7638983,11.193782]
+       "proprietes" : ["Franklin D. Roosevelt",3.7638983,11.193782,"http://wikipast.epfl.ch/wikipast/index.php/Franklin_D._Roosevelt"]
     },
     {
-       "proprietes" : ["Franklin D. Roosevelt",3.7688983,11.198782000000001]
+       "proprietes" : ["Franklin D. Roosevelt",3.7688983,11.198782000000001,"http://wikipast.epfl.ch/wikipast/index.php/Franklin_D._Roosevelt"]
     }
 ]

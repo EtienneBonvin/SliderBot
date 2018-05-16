@@ -1,8 +1,8 @@
 [
     {
-       "proprietes" : ["Le Corbusier",47.103287,6.8324545]
+       "proprietes" : ["Le Corbusier",47.103287,6.8324545,"http://wikipast.epfl.ch/wikipast/index.php/Le_Corbusier"]
     },
     {
-       "proprietes" : ["Thomas Edison",33.7500378,-117.8704931]
+       "proprietes" : ["Thomas Edison",33.7500378,-117.8704931,"http://wikipast.epfl.ch/wikipast/index.php/Thomas_Edison"]
     }
 ]

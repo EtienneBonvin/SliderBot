@@ -1,14 +1,14 @@
 [
     {
-       "proprietes" : ["Louise Michel",43.2961743,5.3699525]
+       "proprietes" : ["Louise Michel",43.2961743,5.3699525,"http://wikipast.epfl.ch/wikipast/index.php/Louise_Michel"]
     },
     {
-       "proprietes" : ["Nicolas II",60.366665,28.616673]
+       "proprietes" : ["Nicolas II",60.366665,28.616673,"http://wikipast.epfl.ch/wikipast/index.php/Nicolas_II"]
     },
     {
-       "proprietes" : ["Nicolas II, Guillaume II",60.371665,28.621672999999998]
+       "proprietes" : ["Nicolas II, Guillaume II",60.371665,28.621672999999998,"http://wikipast.epfl.ch/wikipast/index.php/Nicolas_II"]
     },
     {
-       "proprietes" : ["Nicolas II",59.938732,30.316229]
+       "proprietes" : ["Nicolas II",59.938732,30.316229,"http://wikipast.epfl.ch/wikipast/index.php/Nicolas_II"]
     }
 ]

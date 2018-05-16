@@ -1,17 +1,17 @@
 [
     {
-       "proprietes" : ["Albert Einstein",48.3973944,9.9932755]
+       "proprietes" : ["Albert Einstein",48.3973944,9.9932755,"http://wikipast.epfl.ch/wikipast/index.php/Albert_Einstein"]
     },
     {
-       "proprietes" : ["Georges Clemenceau, Louise Michel",43.4017377,3.6941845]
+       "proprietes" : ["Georges Clemenceau, Louise Michel",43.4017377,3.6941845,"http://wikipast.epfl.ch/wikipast/index.php/Georges_Clemenceau"]
     },
     {
-       "proprietes" : ["Paul Klee",47.0213315,7.4519196]
+       "proprietes" : ["Paul Klee",47.0213315,7.4519196,"http://wikipast.epfl.ch/wikipast/index.php/Paul_Klee"]
     },
     {
-       "proprietes" : ["Joseph Staline",47.4800227,-0.7220535]
+       "proprietes" : ["Joseph Staline",47.4800227,-0.7220535,"http://wikipast.epfl.ch/wikipast/index.php/Joseph_Staline"]
     },
     {
-       "proprietes" : ["Thomas Edison, Menlo Park",37.4538274,-122.1821871]
+       "proprietes" : ["Thomas Edison, Menlo Park",37.4538274,-122.1821871,"http://wikipast.epfl.ch/wikipast/index.php/Thomas_Edison"]
     }
 ]

@@ -1,20 +1,20 @@
 [
     {
-       "proprietes" : ["Bill Gates, Paul Allen, Microsoft",-19.4945167,-57.7086646159883]
+       "proprietes" : ["Bill Gates, Paul Allen, Microsoft",-19.4945167,-57.7086646159883,"http://wikipast.epfl.ch/wikipast/index.php/Bill_Gates"]
     },
     {
-       "proprietes" : ["Le Corbusier, Musee Rath",48.8566101,2.3514992]
+       "proprietes" : ["Le Corbusier, Musee Rath",48.8566101,2.3514992,"http://wikipast.epfl.ch/wikipast/index.php/Le_Corbusier"]
     },
     {
        "proprietes" : ["Musee Rath",48.8616101,2.3564992]
     },
     {
-       "proprietes" : ["Le Corbusier, Musee Jenisch",46.4604627,6.8424616]
+       "proprietes" : ["Le Corbusier, Musee Jenisch",46.4604627,6.8424616,"http://wikipast.epfl.ch/wikipast/index.php/Le_Corbusier"]
     },
     {
        "proprietes" : ["Musee Jenisch",46.4654627,6.8474616]
     },
     {
-       "proprietes" : ["Charles Manson",38.5815719,-121.4943996]
+       "proprietes" : ["Charles Manson",38.5815719,-121.4943996,"http://wikipast.epfl.ch/wikipast/index.php/Charles_Manson"]
     }
 ]

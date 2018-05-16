@@ -1,11 +1,11 @@
 [
     {
-       "proprietes" : ["Winston Churchill",42.041003,-74.118329]
+       "proprietes" : ["Winston Churchill",42.041003,-74.118329,"http://wikipast.epfl.ch/wikipast/index.php/Winston_Churchill"]
     },
     {
-       "proprietes" : ["Gustave Ador",46.2017559,6.1466014]
+       "proprietes" : ["Gustave Ador",46.2017559,6.1466014,"http://wikipast.epfl.ch/wikipast/index.php/Gustave_Ador"]
     },
     {
-       "proprietes" : ["Gustave Ador",46.206755900000005,6.1516014]
+       "proprietes" : ["Gustave Ador",46.206755900000005,6.1516014,"http://wikipast.epfl.ch/wikipast/index.php/Gustave_Ador"]
     }
 ]

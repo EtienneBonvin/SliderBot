@@ -1,11 +1,11 @@
 [
     {
-       "proprietes" : ["Adolf Hitler",41.8933203,12.4829321]
+       "proprietes" : ["Adolf Hitler",41.8933203,12.4829321,"http://wikipast.epfl.ch/wikipast/index.php/Adolf_Hitler"]
     },
     {
-       "proprietes" : ["Jules Piccard",46.5218269,6.6327025]
+       "proprietes" : ["Jules Piccard",46.5218269,6.6327025,"http://wikipast.epfl.ch/wikipast/index.php/Jules_Piccard"]
     },
     {
-       "proprietes" : ["Jules Piccard, Auguste Piccard",46.5268269,6.6377025]
+       "proprietes" : ["Jules Piccard, Auguste Piccard",46.5268269,6.6377025,"http://wikipast.epfl.ch/wikipast/index.php/Jules_Piccard"]
     }
 ]

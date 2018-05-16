@@ -1,11 +1,11 @@
 [
     {
-       "proprietes" : ["Donald Trump",32.7762719,-96.7968559]
+       "proprietes" : ["Donald Trump",32.7762719,-96.7968559,"http://wikipast.epfl.ch/wikipast/index.php/Donald_Trump"]
     },
     {
-       "proprietes" : ["Steffi Graf, Boris Becker",51.5073219,-0.1276474]
+       "proprietes" : ["Steffi Graf, Boris Becker",51.5073219,-0.1276474,"http://wikipast.epfl.ch/wikipast/index.php/Steffi_Graf"]
     },
     {
-       "proprietes" : ["Steffi Graf",51.5123219,-0.12264739999999999]
+       "proprietes" : ["Steffi Graf",51.5123219,-0.12264739999999999,"http://wikipast.epfl.ch/wikipast/index.php/Steffi_Graf"]
     }
 ]

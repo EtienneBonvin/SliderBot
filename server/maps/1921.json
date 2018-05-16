@@ -1,11 +1,11 @@
 [
     {
-       "proprietes" : ["Winston Churchill",51.5073219,-0.1276474]
+       "proprietes" : ["Winston Churchill",51.5073219,-0.1276474,"http://wikipast.epfl.ch/wikipast/index.php/Winston_Churchill"]
     },
     {
-       "proprietes" : ["Mariage",46.2214083,6.2024623]
+       "proprietes" : ["Mariage",46.2214083,6.2024623,"http://wikipast.epfl.ch/wikipast/index.php/Mariage"]
     },
     {
-       "proprietes" : ["Benito Mussolini",41.8933203,12.4829321]
+       "proprietes" : ["Benito Mussolini",41.8933203,12.4829321,"http://wikipast.epfl.ch/wikipast/index.php/Benito_Mussolini"]
     }
 ]

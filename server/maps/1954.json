@@ -3,12 +3,12 @@
        "proprietes" : ["Medaille Richard Strauss, Arthur Honegger",47.5581077,7.5878261]
     },
     {
-       "proprietes" : ["Paul Klee",46.6356963,6.5320717]
+       "proprietes" : ["Paul Klee",46.6356963,6.5320717,"http://wikipast.epfl.ch/wikipast/index.php/Paul_Klee"]
     },
     {
-       "proprietes" : ["Le Corbusier",46.9482713,7.4514512]
+       "proprietes" : ["Le Corbusier",46.9482713,7.4514512,"http://wikipast.epfl.ch/wikipast/index.php/Le_Corbusier"]
     },
     {
-       "proprietes" : ["Arthur Honegger",48.8566101,2.3514992]
+       "proprietes" : ["Arthur Honegger",48.8566101,2.3514992,"http://wikipast.epfl.ch/wikipast/index.php/Arthur_Honegger"]
     }
 ]
