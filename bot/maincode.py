@@ -13,10 +13,10 @@ from html.parser import HTMLParser
 import unicodedata
 from nltk import ne_chunk, pos_tag, word_tokenize
 from nltk.tree import Tree
-#from calais.base.client import Calais
+
 
 # oldest year found : 1765
-# isnumeric() pour détecter si la date est bien récupéree
+
 oldestYearWiki = 1765
 latestYearWiki = 1999
 def masterFunction(year):
@@ -26,8 +26,6 @@ def masterFunction(year):
     """
     #==========Initialisation===========
 
-    # Creates errors
-    #sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
     try:
         response=urlopen("http://wikipast.epfl.ch/wikipast/index.php/"+str(year))
     except HTTPError:
@@ -47,11 +45,8 @@ def masterFunction(year):
             for chunk in ne_chunk(pos_tag(word_tokenize(remove_accents(string)))):
                 if hasattr(chunk, 'label'):
                     if chunk.label() == 'PERSON':
-                        #print(' '.join(c[0] for c in chunk))
                         return True
-
         return False
-
 
     def remove_accents(input_str):
         nfkd_form = unicodedata.normalize('NFKD', input_str)
@@ -103,9 +98,7 @@ def masterFunction(year):
             parser = MyHTMLParser()
             parser.feed(skipCity)
             if len(parser.data) != 0:
-                #print(year, city, parser.data)
                 return (year, city, parser.data)
-
 
     #===========Location===========
 
@@ -113,6 +106,7 @@ def masterFunction(year):
         """
         If location is a country, then it changes it to its capital
         """
+        location = remove_accents(location)
         dataPays = next((item for item in countries if item["name"] == location), False)
         if(dataPays):
             return (dataPays['capital'])
@@ -130,7 +124,6 @@ def masterFunction(year):
     def addWikiLink(input_string):
         output_string = input_string
         for i in range (len(input_string)):
-            #input_string[i][0] = remove_accents(input_string[i][0])
             try:
                 output_string[i].append('http://wikipast.epfl.ch/wikipast/index.php/'+input_string[i][0].split(', ')[0].replace(" ", "_"))
             except:
@@ -207,17 +200,6 @@ def masterFunction(year):
                         outfile.write(indent + '{'+'\n')
                         outfile.write(indent2 + ' "proprietes" : '+'['+'"'+remove_accents(str(inputData[i][0]))+'"'+ ','+ str(inputData[i][1])+ ','+ str(inputData[i][2])+ ','+'"'+ str(inputData[i][3])+'"'+']'+'\n')
                         outfile.write(indent + '}'+','+'\n')
-                # except UnicodeEncodeError:
-                #     inputData[i][0] = inputData[i][0].replace('«', '').strip()
-                #     inputData[i][0] = inputData[i][0].replace('»', '').strip()
-                #     inputData[i][3] = inputData[i][3].replace('«', '').strip()
-                #     inputData[i][3] = inputData[i][3].replace('»', '').strip()
-                #     if i == (maxLimit-1):
-                #             outfile.write(indent2 + ' "proprietes" : '+'['+'"'+remove_accents(str(inputData[i][0]))+'"'+ ','+ str(inputData[i][1])+ ','+ str(inputData[i][2])+ ','+'"'+ str(inputData[i][3])+'"'+']'+'\n')
-                #             outfile.write(indent + '}'+'\n')
-                #     else:
-                #         outfile.write(indent2 + ' "proprietes" : '+'['+'"'+remove_accents(str(inputData[i][0]))+'"'+ ','+ str(inputData[i][1])+ ','+ str(inputData[i][2])+ ','+'"'+ str(inputData[i][3])+'"'+']'+'\n')
-                #         outfile.write(indent + '}'+','+'\n')
                 except:
                     inputData[i][0] = inputData[i][0].replace('«', '').strip()
                     inputData[i][0] = inputData[i][0].replace('»', '').strip()
@@ -243,8 +225,6 @@ def masterFunction(year):
 
         return yearCityNameList
 
-    #print(createCoreList())
-    #print(finalNameCoordTuple(createCoreList()))
     createJson(finalNameCoordTuple(createCoreList()),year)
 
 #masterFunction(1969)
